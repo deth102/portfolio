@@ -1,0 +1,33 @@
+{
+  "Nav": {
+    "brand": "cuong.nm",
+    "home": "Home",
+    "about": "About"
+  },
+  "Home": {
+    "greeting": "Hi, I'm",
+    "name": "Cuong (Henry) Nguyen",
+    "tagline": "AI Engineer · Vibration-Based Fault Diagnosis & Edge AI",
+    "bio": "Mechatronics graduate from Hanoi University of Science and Technology, focused on building AI systems that diagnose mechanical faults from vibration signals — from signal preprocessing and transformer models all the way to deploying them on edge devices for real-time inference. Outside of research, I build small AI-powered indie projects in my spare time.",
+    "photoPlaceholder": "Your photo"
+  },
+  "About": {
+    "title": "About",
+    "intro": "I'm Cuong, a Mechatronics engineer (Good Graduation) from Hanoi University of Science and Technology. I work at the intersection of signal processing, machine learning, and embedded systems — turning raw vibration data into reliable, real-time diagnostics for rotating machinery.",
+    "whatIDo": "What I work on",
+    "items": {
+      "backend": "Fault diagnosis & PHM — vibration analysis, RUL prediction, explainable AI for rotating machinery.",
+      "indie": "Edge AI — deploying classical and deep models (Softmax Regression, Random Forest, Transformers) on edge hardware for standalone real-time inference.",
+      "writing": "Indie AI projects — e.g. AutoDub-Lite, an end-to-end pipeline that dubs English YouTube videos into Vietnamese using STT, MT and TTS."
+    },
+    "contactHeading": "Get in touch",
+    "contactBody": "The fastest way to reach me is by",
+    "contactLink": "email"
+  },
+  "LocaleSwitcher": {
+    "label": "Language",
+    "en": "English",
+    "vi": "Tiếng Việt",
+    "zh": "中文"
+  }
+}
