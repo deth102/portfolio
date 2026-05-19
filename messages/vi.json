@@ -34,6 +34,13 @@
   "Experience": {
     "title": "Kinh nghiệm"
   },
+  "Work": {
+    "title": "Dự án công việc",
+    "roleLabel": "Vai trò",
+    "stackLabel": "Stack",
+    "highlightsLabel": "Điểm nổi bật",
+    "learnMore": "Xem chi tiết"
+  },
   "Projects": {
     "title": "Dự án cá nhân",
     "viewOnGithub": "Xem trên GitHub"

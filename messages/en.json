@@ -34,6 +34,13 @@
   "Experience": {
     "title": "Experience"
   },
+  "Work": {
+    "title": "Work",
+    "roleLabel": "My Role",
+    "stackLabel": "Stack",
+    "highlightsLabel": "Highlights",
+    "learnMore": "Learn more"
+  },
   "Projects": {
     "title": "Personal Projects",
     "viewOnGithub": "View on GitHub"

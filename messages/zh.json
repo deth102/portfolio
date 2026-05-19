@@ -34,6 +34,13 @@
   "Experience": {
     "title": "工作经历"
   },
+  "Work": {
+    "title": "工作项目",
+    "roleLabel": "我的角色",
+    "stackLabel": "技术栈",
+    "highlightsLabel": "亮点",
+    "learnMore": "了解更多"
+  },
   "Projects": {
     "title": "个人项目",
     "viewOnGithub": "在 GitHub 上查看"
