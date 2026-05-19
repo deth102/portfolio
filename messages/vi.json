@@ -8,7 +8,7 @@
     "greeting": "Xin chào, tôi là",
     "name": "Nguyễn Mạnh Cường",
     "tagline": "Kỹ sư AI · Chẩn đoán lỗi từ tín hiệu rung & Edge AI",
-    "bio": "Tốt nghiệp ngành Cơ điện tử tại Đại học Bách khoa Hà Nội, tôi tập trung xây dựng các hệ thống AI chẩn đoán lỗi cơ khí dựa trên tín hiệu rung — từ khâu xử lý tín hiệu, mô hình Transformer cho đến triển khai trực tiếp trên thiết bị edge để suy luận thời gian thực. Ngoài nghiên cứu, tôi còn làm các dự án indie nhỏ ứng dụng AI vào những vấn đề thật.",
+    "bio": "Tốt nghiệp ngành Cơ điện tử tại Đại học Bách khoa Hà Nội, tôi tập trung xây dựng các hệ thống AI chẩn đoán lỗi cơ khí dựa trên tín hiệu rung — từ khâu xử lý tín hiệu, huấn luyện mô hình machine/deep learning cho đến triển khai trực tiếp trên thiết bị edge để suy luận thời gian thực. Ngoài nghiên cứu, tôi còn làm các dự án indie nhỏ ứng dụng AI vào những vấn đề thật.",
     "photoPlaceholder": "Ảnh của bạn"
   },
   "About": {
@@ -23,6 +23,22 @@
     "contactHeading": "Liên hệ",
     "contactBody": "Cách nhanh nhất để liên lạc với tôi là qua",
     "contactLink": "email"
+  },
+  "Skills": {
+    "title": "Kỹ năng",
+    "languages": "Ngôn ngữ lập trình",
+    "languagesList": "Python, C/C++, Matlab & Simulink",
+    "tools": "Phần mềm & Công cụ",
+    "toolsList": "Autocad, Solidworks, VS Code, Office",
+    "research": "Lĩnh vực nghiên cứu",
+    "researchList": "Xử lý tín hiệu cho phát hiện lỗi, Phân tích rung động, PHM, Dự báo RUL, Explainable AI, Transfer Learning"
+  },
+  "Experience": {
+    "title": "Kinh nghiệm"
+  },
+  "Projects": {
+    "title": "Dự án cá nhân",
+    "viewOnGithub": "Xem trên GitHub"
   },
   "LocaleSwitcher": {
     "label": "Ngôn ngữ",

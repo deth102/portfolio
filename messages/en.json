@@ -24,6 +24,22 @@
     "contactBody": "The fastest way to reach me is by",
     "contactLink": "email"
   },
+  "Skills": {
+    "title": "Skills",
+    "languages": "Programming Languages",
+    "languagesList": "Python, C/C++, Matlab & Simulink",
+    "tools": "Software & Tools",
+    "toolsList": "Autocad, Solidworks, VS Code, Office",
+    "research": "Research Fields",
+    "researchList": "Signal Processing for Fault Detection, Vibration Analysis, PHM, RUL Prediction, Explainable AI, Transfer Learning"
+  },
+  "Experience": {
+    "title": "Experience"
+  },
+  "Projects": {
+    "title": "Personal Projects",
+    "viewOnGithub": "View on GitHub"
+  },
   "LocaleSwitcher": {
     "label": "Language",
     "en": "English",

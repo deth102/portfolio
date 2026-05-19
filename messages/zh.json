@@ -24,6 +24,22 @@
     "contactBody": "联系我最快的方式是通过",
     "contactLink": "电子邮件"
   },
+  "Skills": {
+    "title": "技能",
+    "languages": "编程语言",
+    "languagesList": "Python、C/C++、Matlab & Simulink",
+    "tools": "软件 & 工具",
+    "toolsList": "Autocad、Solidworks、VS Code、Office",
+    "research": "研究领域",
+    "researchList": "故障检测信号处理、振动分析、PHM、剩余寿命预测、可解释 AI、迁移学习"
+  },
+  "Experience": {
+    "title": "工作经历"
+  },
+  "Projects": {
+    "title": "个人项目",
+    "viewOnGithub": "在 GitHub 上查看"
+  },
   "LocaleSwitcher": {
     "label": "语言",
     "en": "English",

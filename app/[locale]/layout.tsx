@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name — Personal Site",
-  description: "Personal portfolio site built with Next.js and Tailwind.",
+  title: "HenryCuong",
+  description: "Cuong's personal website",
 };
 
 export function generateStaticParams() {
