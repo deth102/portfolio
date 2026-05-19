@@ -6,11 +6,11 @@ const contacts = [
     value: "cuongnm003@gmail.com",
     href: "mailto:cuongnm003@gmail.com",
   },
-  {
-    labelKey: "phoneLabel" as const,
-    value: "+84 868 456 638",
-    href: "tel:+84868456638",
-  },
+  // {
+  //   labelKey: "phoneLabel" as const,
+  //   value: "+84 868 456 638",
+  //   href: "tel:+84868456638",
+  // },
   {
     labelKey: "githubLabel" as const,
     value: "github.com/deth102",
