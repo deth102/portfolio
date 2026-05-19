@@ -1,10 +1,13 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { works } from "@/data/work";
+import { routing } from "@/i18n/routing";
 
 export default async function Work() {
   const t = await getTranslations("Work");
+  const locale = (await getLocale()) as (typeof routing.locales)[number];
+  const list = works[locale] ?? works[routing.defaultLocale];
 
-  if (works.length === 0) return null;
+  if (list.length === 0) return null;
 
   return (
     <section className="mx-auto max-w-6xl px-6 py-12 md:py-16">
@@ -13,7 +16,7 @@ export default async function Work() {
       </h2>
 
       <div className="mt-8 grid grid-cols-1 gap-6">
-        {works.map((w) => (
+        {list.map((w) => (
           <article
             key={w.name}
             className="rounded-2xl border border-border/60 bg-card/40 p-6 md:p-8"
