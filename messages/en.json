@@ -13,7 +13,7 @@
   },
   "About": {
     "title": "About",
-    "intro": "I'm Cuong, a Mechatronics engineer (Good Graduation) from Hanoi University of Science and Technology. I work at the intersection of signal processing, machine learning, and embedded systems — turning raw vibration data into reliable, real-time diagnostics for rotating machinery.",
+    "intro": "I'm Cuong, a Mechatronics engineer from Hanoi University of Science and Technology. I work at the intersection of signal processing, machine learning, and embedded systems — turning raw vibration data into reliable, real-time diagnostics for rotating machinery.",
     "whatIDo": "What I work on",
     "items": {
       "backend": "Fault diagnosis & PHM — vibration analysis, RUL prediction, explainable AI for rotating machinery.",

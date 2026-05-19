@@ -13,7 +13,7 @@
   },
   "About": {
     "title": "Giới thiệu",
-    "intro": "Tôi là Cường, kỹ sư Cơ điện tử (tốt nghiệp loại Giỏi) tại Đại học Bách khoa Hà Nội. Tôi làm việc ở giao điểm giữa xử lý tín hiệu, machine learning và hệ thống nhúng — biến tín hiệu rung thô thành những kết quả chẩn đoán đáng tin cậy, thời gian thực cho máy quay.",
+    "intro": "Tôi là Cường, tốt nghiệp kỹ sư Cơ điện tử tại Đại học Bách khoa Hà Nội. Tôi làm việc ở giao điểm giữa xử lý tín hiệu, machine learning và hệ thống nhúng — biến tín hiệu rung thô thành những kết quả chẩn đoán đáng tin cậy, thời gian thực cho máy quay.",
     "whatIDo": "Tôi làm gì",
     "items": {
       "backend": "Chẩn đoán lỗi & PHM — phân tích rung động, dự báo tuổi thọ còn lại (RUL), Explainable AI cho máy quay.",
