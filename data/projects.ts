@@ -6,13 +6,13 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  {
-    title: "AutoDub-Lite",
-    description:
-      "End-to-end AI dubbing pipeline that converts English YouTube videos into Vietnamese using STT, translation and TTS.",
-    url: "https://github.com/deth102/AutoDub_Lite",
-    tags: ["STT", "MT", "TTS"],
-  },
+  // {
+  //   title: "AutoDub-Lite",
+  //   description:
+  //     "End-to-end AI dubbing pipeline that converts English YouTube videos into Vietnamese using STT, translation and TTS.",
+  //   url: "https://github.com/deth102/AutoDub_Lite",
+  //   tags: ["STT", "MT", "TTS"],
+  // },
   {
     title: "Real-Time Fault Diagnosis on Edge",
     description:
@@ -37,7 +37,7 @@ export const projects: Project[] = [
   {
     title: "Transformer-Based Fault Diagnosis",
     description:
-      "Conv-Transformer and Vision Transformer for time-series and time–frequency data — accurate diagnosis of complex mechanical faults.",
+      "Conv-Transformer and Vision Transformer for time-series and time-frequency data, achieving accurate diagnosis of complex mechanical faults.",
     url: "https://github.com/deth102/transformer_for_fault_diagnosis",
     tags: ["Transformer"],
   },

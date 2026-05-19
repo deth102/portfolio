@@ -20,9 +20,9 @@ export const researches: Record<"en" | "vi" | "zh", Research[]> = {
       title:
         "Fault Diagnosis of Planetary Roller Screws via Digital Twin + Transfer Learning",
       role: "Master's Researcher",
-      period: "24 months (2025–2027)",
+      period: "24 months (2026–2028)",
       problem:
-        "Planetary Roller Screws (PRS) are high-precision actuators used in robotics, aerospace and CNC machines, but real-world failure data is extremely scarce — preventing direct training of conventional deep-learning models.",
+        "Planetary Roller Screws (PRS) are high-precision actuators used in robotics, aerospace and CNC machines, but real-world failure data is extremely scarce, preventing direct training of conventional deep-learning models.",
       approach: [
         {
           name: "Analytical model",
@@ -42,7 +42,7 @@ export const researches: Record<"en" | "vi" | "zh", Research[]> = {
         {
           name: "Transfer Learning",
           description:
-            "Compare three strategy families — instance-based (TrAdaBoost+KLIEP), feature-based (MMD/CORAL/DANN-lite), adversarial (CDAN/MCD) — to reduce the simulation↔real domain gap.",
+            "Compare three strategy families: instance-based (TrAdaBoost+KLIEP), feature-based (MMD/CORAL/DANN-lite), adversarial (CDAN/MCD) to reduce the simulation↔real domain gap.",
         },
       ],
     },
@@ -74,7 +74,7 @@ export const researches: Record<"en" | "vi" | "zh", Research[]> = {
         {
           name: "Transfer Learning",
           description:
-            "So sánh 3 nhóm chiến lược — instance-based (TrAdaBoost+KLIEP), feature-based (MMD/CORAL/DANN-lite), adversarial (CDAN/MCD) — giảm domain gap mô phỏng↔thực.",
+            "So sánh 3 nhóm chiến lược: instance-based (TrAdaBoost+KLIEP), feature-based (MMD/CORAL/DANN-lite), adversarial (CDAN/MCD) để giảm domain gap mô phỏng↔thực.",
         },
       ],
     },
@@ -106,7 +106,7 @@ export const researches: Record<"en" | "vi" | "zh", Research[]> = {
         {
           name: "迁移学习",
           description:
-            "比较三类策略——基于实例（TrAdaBoost+KLIEP）、基于特征（MMD/CORAL/DANN-lite）、对抗式（CDAN/MCD）——以缩小仿真↔真实的域差距。",
+            "比较三类策略：基于实例（TrAdaBoost+KLIEP）、基于特征（MMD/CORAL/DANN-lite）、对抗式（CDAN/MCD），以缩小仿真↔真实的域差距。",
         },
       ],
     },
