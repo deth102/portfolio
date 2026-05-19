@@ -20,6 +20,6 @@ export const experiences: Experience[] = [
     company: "Hanoi University of Science and Technology",
     period: "2024 - Present",
     description:
-      "Short description of your previous role. You can add more items below or remove this one.",
+      "",
   },
 ];

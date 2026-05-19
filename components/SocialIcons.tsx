@@ -15,11 +15,21 @@ const links: IconLink[] = [
     ),
   },
   {
-    href: "https://x.com/yourname",
-    label: "X",
+    href: "https://www.instagram.com/deth_18.12/",
+    label: "Instagram",
     icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
-        <path d="M18.244 2H21.5l-7.51 8.58L23 22h-6.84l-5.36-6.99L4.6 22H1.34l8.04-9.18L1 2h7.02l4.84 6.4L18.24 2zm-1.2 18h1.88L7.04 4H5.06l11.98 16z" />
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="h-5 w-5"
+      >
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
       </svg>
     ),
   },
