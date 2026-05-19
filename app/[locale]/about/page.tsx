@@ -1,5 +1,28 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+const contacts = [
+  {
+    labelKey: "emailLabel" as const,
+    value: "cuongnm003@gmail.com",
+    href: "mailto:cuongnm003@gmail.com",
+  },
+  {
+    labelKey: "phoneLabel" as const,
+    value: "+84 868 456 638",
+    href: "tel:+84868456638",
+  },
+  {
+    labelKey: "githubLabel" as const,
+    value: "github.com/deth102",
+    href: "https://github.com/deth102",
+  },
+  {
+    labelKey: "linkedinLabel" as const,
+    value: "linkedin.com/in/cuongmanhnguyen",
+    href: "https://www.linkedin.com/in/c%C6%B0%E1%BB%9Dng-nguy%E1%BB%85n-m%E1%BA%A1nh-b23102395/",
+  },
+];
+
 export default async function AboutPage({
   params,
 }: {
@@ -18,24 +41,30 @@ export default async function AboutPage({
         {t("intro")}
       </p>
 
-      <h2 className="mt-12 text-2xl font-semibold">{t("whatIDo")}</h2>
-      <ul className="mt-4 list-disc pl-6 text-foreground/80 space-y-2">
-        <li>{t("items.backend")}</li>
-        <li>{t("items.indie")}</li>
-        <li>{t("items.writing")}</li>
-      </ul>
-
-      <h2 className="mt-12 text-2xl font-semibold">{t("contactHeading")}</h2>
-      <p className="mt-4 text-foreground/80">
-        {t("contactBody")}{" "}
-        <a
-          href="mailto:cuongnm003@gmail.com"
-          className="text-brand underline-offset-4 hover:underline"
-        >
-          {t("contactLink")}
-        </a>
-        .
-      </p>
+      <dl className="mt-10 divide-y divide-border/60 border-y border-border/60">
+        {contacts.map((c) => (
+          <div
+            key={c.labelKey}
+            className="grid grid-cols-3 gap-4 py-4 items-baseline"
+          >
+            <dt className="text-sm font-medium uppercase tracking-wider text-muted">
+              {t(c.labelKey)}
+            </dt>
+            <dd className="col-span-2">
+              <a
+                href={c.href}
+                target={c.href.startsWith("http") ? "_blank" : undefined}
+                rel={
+                  c.href.startsWith("http") ? "noreferrer noopener" : undefined
+                }
+                className="text-foreground hover:text-brand underline-offset-4 hover:underline break-all"
+              >
+                {c.value}
+              </a>
+            </dd>
+          </div>
+        ))}
+      </dl>
     </section>
   );
 }

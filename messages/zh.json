@@ -2,7 +2,7 @@
   "Nav": {
     "brand": "cuong.nm",
     "home": "首页",
-    "about": "关于"
+    "about": "联系"
   },
   "Home": {
     "greeting": "你好，我是",
@@ -12,17 +12,15 @@
     "photoPlaceholder": "你的照片"
   },
   "About": {
-    "title": "关于",
-    "intro": "我是 Cuong，河内科技大学机电一体化专业的工程师（良好毕业）。我的工作处于信号处理、机器学习和嵌入式系统的交叉点——把原始振动数据转化为旋转机械的可靠、实时诊断。",
-    "whatIDo": "我在做什么",
-    "items": {
-      "backend": "故障诊断与 PHM — 振动分析、剩余寿命 (RUL) 预测、可解释 AI（XAI）应用于旋转机械。",
-      "indie": "边缘 AI — 将经典与深度模型（Softmax 回归、随机森林、Transformer）部署到边缘硬件，实现独立、实时的推理。",
-      "writing": "独立 AI 项目 — 例如 AutoDub-Lite：端到端管道，使用语音识别、机器翻译和语音合成自动把英文 YouTube 视频配成越南语。"
-    },
-    "contactHeading": "联系我",
-    "contactBody": "联系我最快的方式是通过",
-    "contactLink": "电子邮件"
+    "title": "联系我",
+    "intro": "联系我最快的方式是通过电子邮件。我也活跃于以下平台。",
+    "emailLabel": "电子邮件",
+    "phoneLabel": "电话",
+    "githubLabel": "GitHub",
+    "linkedinLabel": "LinkedIn"
+  },
+  "Education": {
+    "title": "教育背景"
   },
   "Skills": {
     "title": "技能",

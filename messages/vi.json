@@ -2,7 +2,7 @@
   "Nav": {
     "brand": "cuong.nm",
     "home": "Trang chủ",
-    "about": "Giới thiệu"
+    "about": "Liên hệ"
   },
   "Home": {
     "greeting": "Xin chào, tôi là",
@@ -12,17 +12,15 @@
     "photoPlaceholder": "Ảnh của bạn"
   },
   "About": {
-    "title": "Giới thiệu",
-    "intro": "Tôi là Cường, tốt nghiệp kỹ sư Cơ điện tử tại Đại học Bách khoa Hà Nội. Tôi làm việc ở giao điểm giữa xử lý tín hiệu, machine learning và hệ thống nhúng — biến tín hiệu rung thô thành những kết quả chẩn đoán đáng tin cậy, thời gian thực cho máy quay.",
-    "whatIDo": "Tôi làm gì",
-    "items": {
-      "backend": "Chẩn đoán lỗi & PHM — phân tích rung động, dự báo tuổi thọ còn lại (RUL), Explainable AI cho máy quay.",
-      "indie": "Edge AI — triển khai cả mô hình cổ điển và deep learning (Softmax Regression, Random Forest, Transformer) trên phần cứng edge để suy luận độc lập, thời gian thực.",
-      "writing": "Dự án AI indie — ví dụ AutoDub-Lite: pipeline end-to-end tự động lồng tiếng Việt cho video YouTube tiếng Anh bằng STT, dịch máy và TTS."
-    },
-    "contactHeading": "Liên hệ",
-    "contactBody": "Cách nhanh nhất để liên lạc với tôi là qua",
-    "contactLink": "email"
+    "title": "Liên hệ",
+    "intro": "Cách nhanh nhất để liên lạc với tôi là qua email. Tôi cũng hoạt động trên các nền tảng dưới đây.",
+    "emailLabel": "Email",
+    "phoneLabel": "Điện thoại",
+    "githubLabel": "GitHub",
+    "linkedinLabel": "LinkedIn"
+  },
+  "Education": {
+    "title": "Học vấn"
   },
   "Skills": {
     "title": "Kỹ năng",

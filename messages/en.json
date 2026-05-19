@@ -12,17 +12,15 @@
     "photoPlaceholder": "Your photo"
   },
   "About": {
-    "title": "About",
-    "intro": "I'm Cuong, a Mechatronics engineer from Hanoi University of Science and Technology. I work at the intersection of signal processing, machine learning, and embedded systems — turning raw vibration data into reliable, real-time diagnostics for rotating machinery.",
-    "whatIDo": "What I work on",
-    "items": {
-      "backend": "Fault diagnosis & PHM — vibration analysis, RUL prediction, explainable AI for rotating machinery.",
-      "indie": "Edge AI — deploying classical and deep models (Softmax Regression, Random Forest, Transformers) on edge hardware for standalone real-time inference.",
-      "writing": "Indie AI projects — e.g. AutoDub-Lite, an end-to-end pipeline that dubs English YouTube videos into Vietnamese using STT, MT and TTS."
-    },
-    "contactHeading": "Get in touch",
-    "contactBody": "The fastest way to reach me is by",
-    "contactLink": "email"
+    "title": "Contact",
+    "intro": "The fastest way to reach me is by email. I'm also active on the platforms below.",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "githubLabel": "GitHub",
+    "linkedinLabel": "LinkedIn"
+  },
+  "Education": {
+    "title": "Education"
   },
   "Skills": {
     "title": "Skills",
