@@ -52,7 +52,7 @@ export const researches: Record<"en" | "vi" | "zh", Research[]> = {
       title:
         "Chẩn đoán hỏng hóc Vít-me bi đũa hành tinh bằng Digital Twin + Transfer Learning",
       role: "Nghiên cứu sinh Thạc sĩ",
-      period: "24 tháng (2025–2027)",
+      period: "24 tháng (2026–2028)",
       problem:
         "Planetary Roller Screw (PRS) là cơ cấu truyền động chính xác cao dùng trong robot, hàng không, máy CNC nhưng dữ liệu hỏng thực tế cực kỳ khan hiếm, khiến các mô hình học sâu truyền thống không thể huấn luyện trực tiếp.",
       approach: [
@@ -84,7 +84,7 @@ export const researches: Record<"en" | "vi" | "zh", Research[]> = {
       title:
         "基于数字孪生 + 迁移学习的行星滚柱丝杠故障诊断",
       role: "硕士研究生",
-      period: "24 个月 (2025–2027)",
+      period: "24 个月 (2026–2028)",
       problem:
         "行星滚柱丝杠（PRS）是机器人、航空航天和 CNC 机床中使用的高精度传动机构，但真实故障数据极其稀缺，使得传统深度学习模型无法直接训练。",
       approach: [
