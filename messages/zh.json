@@ -34,6 +34,12 @@
   "Experience": {
     "title": "工作经历"
   },
+  "Research": {
+    "title": "研究",
+    "problemLabel": "问题",
+    "approachLabel": "方法",
+    "learnMore": "了解更多"
+  },
   "Work": {
     "title": "工作项目",
     "roleLabel": "我的角色",

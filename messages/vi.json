@@ -34,6 +34,12 @@
   "Experience": {
     "title": "Kinh nghiệm"
   },
+  "Research": {
+    "title": "Nghiên cứu",
+    "problemLabel": "Bài toán",
+    "approachLabel": "Cách tiếp cận",
+    "learnMore": "Đọc thêm"
+  },
   "Work": {
     "title": "Dự án công việc",
     "roleLabel": "Vai trò",

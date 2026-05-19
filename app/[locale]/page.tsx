@@ -4,6 +4,7 @@ import SocialIcons from "@/components/SocialIcons";
 import Skills from "@/components/Skills";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
+import Research from "@/components/Research";
 import Work from "@/components/Work";
 import Projects from "@/components/Projects";
 
@@ -54,6 +55,7 @@ export default async function Home({
       <Skills />
       <Education />
       <Experience />
+      <Research />
       <Work />
       <Projects />
     </>
