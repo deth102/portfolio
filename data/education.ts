@@ -13,6 +13,6 @@ export const educations: Education[] = [
     school: "Hanoi University of Science and Technology",
     location: "Hanoi, Vietnam",
     period: "2021 - 2025",
-    note: "Good Graduation · English B2",
+    note: "Good Degree · English B2",
   },
 ];
