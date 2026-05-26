@@ -30,18 +30,22 @@ export default function Reveal({
       const mm = gsap.matchMedia();
 
       mm.add("(prefers-reduced-motion: no-preference)", () => {
-        gsap.from(ref.current, {
-          y,
-          opacity: 0,
-          duration,
-          delay,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: ref.current,
-            start: "top 88%",
-            once: true,
-          },
-        });
+        gsap.fromTo(
+          ref.current,
+          { y, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration,
+            delay,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: ref.current,
+              start: "top 88%",
+              once: true,
+            },
+          }
+        );
       });
 
       mm.add("(prefers-reduced-motion: reduce)", () => {
