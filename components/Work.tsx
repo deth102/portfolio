@@ -19,7 +19,7 @@ export default async function Work() {
         {list.map((w) => (
           <article
             key={w.name}
-            className="rounded-2xl border border-border/60 bg-card/40 p-6 md:p-8"
+            className="rounded-2xl border border-border/60 bg-card/40 p-6 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand/50 hover:bg-card/70"
           >
             <header className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
               <div>

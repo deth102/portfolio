@@ -19,7 +19,7 @@ export default async function Research() {
         {list.map((r, idx) => (
           <article
             key={idx}
-            className="rounded-2xl border border-border/60 bg-card/40 p-6 md:p-8"
+            className="rounded-2xl border border-border/60 bg-card/40 p-6 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand/50 hover:bg-card/70"
           >
             <header>
               <h3 className="text-xl md:text-2xl font-semibold tracking-tight leading-snug">

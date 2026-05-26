@@ -15,7 +15,7 @@ export default async function Projects() {
           {projects.map((p) => (
             <li
               key={p.url}
-              className="snap-start shrink-0 w-72 md:w-80 rounded-2xl border border-border/60 bg-card/40 p-5 flex flex-col"
+              className="snap-start shrink-0 w-72 md:w-80 rounded-2xl border border-border/60 bg-card/40 p-5 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:border-brand/50 hover:bg-card/70"
             >
               <h3 className="text-base font-semibold leading-snug">
                 {p.title}
