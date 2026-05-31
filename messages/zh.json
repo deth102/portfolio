@@ -8,7 +8,7 @@
     "greeting": "你好，我是",
     "name": "阮孟强 (Henry)",
     "tagline": "AI 工程师 · 基于振动信号的故障诊断与边缘 AI",
-    "bio": "毕业于河内科技大学机电一体化专业。目前是河内科技大学的 PHM 研究人员，同时担任 Aladin 公司的后端开发工程师。我的硕士研究聚焦于使用数字孪生和迁移学习诊断行星滚柱丝杠的故障，结合解析建模、FEA 仿真和深度学习。在工程方面，我在构建 Aladata，一个越南语对话式 Text-to-SQL 系统，负责其中的 Memory 层和 FastAPI 服务。我还独立设计并构建了实验室的双语网站 itdhust.com，这是一个 Next.js 站点，带有自定义动效以及由 BibTeX 驱动的论文页。工作之余，我也会做一些 AI 驱动的小型独立项目。",
+    "bio": "河内科技大学机电一体化工程师。专注于工业故障诊断 AI、LLM 产品的后端系统，偶尔打磨一些精致的网站。",
     "photoPlaceholder": "你的照片",
     "availability": "正在接外包项目",
     "availabilityDetail": "Web · LLM · AI 建模"
