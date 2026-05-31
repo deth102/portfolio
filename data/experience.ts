@@ -17,7 +17,7 @@ export const experiences: Experience[] = [
   },
   {
     role: "PHM Researcher",
-    company: "ITD Lab - Hanoi University of Science and Technology (https://itdhust.com/)",
+    company: "ITD Lab (https://itdhust.com) - Hanoi University of Science and Technology",
     period: "2025 - Present",
     description:
       "",
