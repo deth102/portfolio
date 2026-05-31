@@ -8,8 +8,10 @@
     "greeting": "Xin chào, tôi là",
     "name": "Nguyễn Mạnh Cường",
     "tagline": "Kỹ sư AI · Chẩn đoán lỗi từ tín hiệu rung & Edge AI",
-    "bio": "Tốt nghiệp ngành Cơ điện tử tại Đại học Bách khoa Hà Nội. Hiện tôi đang là PHM researcher tại HUST và backend developer tại Aladin. Đề tài thạc sĩ của tôi tập trung vào chẩn đoán hỏng hóc Vít-me bi đũa hành tinh bằng Digital Twin và Transfer Learning, kết hợp mô hình giải tích, mô phỏng FEA và deep learning. Ở mảng kỹ thuật, tôi đang xây dựng Aladata, hệ thống Conversational Text-to-SQL tiếng Việt, nơi tôi sở hữu tầng Memory và FastAPI service. Ngoài công việc, tôi vẫn làm các dự án AI indie nhỏ trong thời gian rảnh.",
-    "photoPlaceholder": "Ảnh của bạn"
+    "bio": "Tốt nghiệp ngành Cơ điện tử tại Đại học Bách khoa Hà Nội. Hiện tôi đang là PHM researcher tại HUST và backend developer tại Aladin. Đề tài thạc sĩ của tôi tập trung vào chẩn đoán hỏng hóc Vít-me bi đũa hành tinh bằng Digital Twin và Transfer Learning, kết hợp mô hình giải tích, mô phỏng FEA và deep learning. Ở mảng kỹ thuật, tôi đang xây dựng Aladata, hệ thống Conversational Text-to-SQL tiếng Việt, nơi tôi sở hữu tầng Memory và FastAPI service. Tôi cũng tự thiết kế và xây dựng website song ngữ cho lab tại itdhust.com, một site Next.js với nhiều animation tự viết và trang Publications tự parse BibTeX. Ngoài công việc, tôi vẫn làm các dự án AI indie nhỏ trong thời gian rảnh.",
+    "photoPlaceholder": "Ảnh của bạn",
+    "availability": "Đang nhận dự án freelance",
+    "availabilityDetail": "Web · LLM · Mô hình hóa AI"
   },
   "About": {
     "title": "Liên hệ",
@@ -26,6 +28,8 @@
     "title": "Kỹ năng",
     "languages": "Ngôn ngữ lập trình",
     "languagesList": "Python, C/C++, Matlab & Simulink",
+    "web": "Phát triển Web",
+    "webList": "HTML, CSS, JavaScript, TypeScript, React, Next.js, Tailwind, GSAP, next-intl",
     "tools": "Phần mềm & Công cụ",
     "toolsList": "Autocad, Solidworks, VS Code, Office",
     "research": "Lĩnh vực nghiên cứu",

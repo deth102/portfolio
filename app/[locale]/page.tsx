@@ -24,6 +24,8 @@ export default async function Home({
         name={t("name")}
         tagline={t("tagline")}
         bio={t("bio")}
+        availability={t("availability")}
+        availabilityDetail={t("availabilityDetail")}
       />
 
       <Reveal>

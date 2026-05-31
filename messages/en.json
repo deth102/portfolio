@@ -8,8 +8,10 @@
     "greeting": "Hi, I'm",
     "name": "Cuong (Henry) Nguyen",
     "tagline": "AI Engineer · Vibration-Based Fault Diagnosis & Edge AI",
-    "bio": "Mechatronics graduate from Hanoi University of Science and Technology. Currently a PHM researcher at HUST and a backend developer at Aladin. My Master's research focuses on fault diagnosis of Planetary Roller Screws using Digital Twin and Transfer Learning, combining analytical modeling, FEA simulation and deep learning. On the engineering side I build Aladata, a Vietnamese conversational Text-to-SQL system where I own the Memory layer and the FastAPI service. Outside of work I ship small AI-powered indie projects.",
-    "photoPlaceholder": "Your photo"
+    "bio": "Mechatronics graduate from Hanoi University of Science and Technology. Currently a PHM researcher at HUST and a backend developer at Aladin. My Master's research focuses on fault diagnosis of Planetary Roller Screws using Digital Twin and Transfer Learning, combining analytical modeling, FEA simulation and deep learning. On the engineering side I build Aladata, a Vietnamese conversational Text-to-SQL system where I own the Memory layer and the FastAPI service. I also designed and built the lab's bilingual website at itdhust.com, a Next.js site with custom animations and a BibTeX-driven publications page. Outside of work I ship small AI-powered indie projects.",
+    "photoPlaceholder": "Your photo",
+    "availability": "Open to freelance",
+    "availabilityDetail": "Web · LLM · AI modeling"
   },
   "About": {
     "title": "Contact",
@@ -26,6 +28,8 @@
     "title": "Skills",
     "languages": "Programming Languages",
     "languagesList": "Python, C/C++, Matlab & Simulink",
+    "web": "Web Development",
+    "webList": "HTML, CSS, JavaScript, TypeScript, React, Next.js, Tailwind, GSAP, next-intl",
     "tools": "Software & Tools",
     "toolsList": "Autocad, Solidworks, VS Code, Office",
     "research": "Research Fields",

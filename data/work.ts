@@ -20,7 +20,7 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
       description:
         "Designed and built itdhust.com from scratch for ITD Lab at HUST. A six-page bilingual (English / Vietnamese) site featuring a BibTeX-driven publications page, an auto-translated news feed, member profiles, recruiting page, and an events gallery. Heavy interaction polish: GSAP scroll reveals, 3D-tilt cards, magnetic CTAs, mouse-tracking spotlight, animated aurora background, and a partner marquee.",
       role:
-        "Solo full-stack developer — design, frontend, content modeling, SEO and deployment.",
+        "Solo full-stack developer: design, frontend, content modeling, SEO and deployment.",
       stack: [
         "Next.js 16",
         "TypeScript",
@@ -69,7 +69,7 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
       description:
         "Tự thiết kế và xây dựng itdhust.com từ đầu cho ITD Lab (HUST). Trang sáu mục, song ngữ Anh/Việt: trang Publications tự parse BibTeX, News auto-dịch, hồ sơ thành viên, trang Tuyển sinh và Gallery sự kiện. Đẩy mạnh tương tác: GSAP scroll reveals, card tilt 3D, magnetic CTA, spotlight đuổi theo cursor, aurora background xoay nhẹ, marquee partner.",
       role:
-        "Solo full-stack developer — thiết kế, frontend, content modeling, SEO và deploy.",
+        "Solo full-stack developer: thiết kế, frontend, content modeling, SEO và deploy.",
       stack: [
         "Next.js 16",
         "TypeScript",
