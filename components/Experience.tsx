@@ -19,7 +19,31 @@ export default async function Experience() {
             />
             <h3 className="text-xl font-semibold">{exp.role}</h3>
             <p className="mt-1 text-sm text-muted">
-              {exp.company} • {exp.period}
+              {exp.companyUrl ? (
+                <a
+                  href={exp.companyUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="inline-flex items-center gap-1 text-foreground hover:text-brand underline-offset-4 hover:underline transition-colors"
+                >
+                  {exp.company}
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="h-3 w-3"
+                    aria-hidden
+                  >
+                    <path d="M7 17 17 7M8 7h9v9" />
+                  </svg>
+                </a>
+              ) : (
+                <span>{exp.company}</span>
+              )}{" "}
+              • {exp.period}
             </p>
             <p className="mt-3 text-foreground/80 leading-relaxed max-w-3xl">
               {exp.description}
