@@ -19,7 +19,8 @@
     "emailLabel": "Email",
     "phoneLabel": "Điện thoại",
     "githubLabel": "GitHub",
-    "linkedinLabel": "LinkedIn"
+    "linkedinLabel": "LinkedIn",
+    "facebookLabel": "Facebook"
   },
   "Education": {
     "title": "Học vấn"

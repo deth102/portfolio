@@ -19,7 +19,8 @@
     "emailLabel": "Email",
     "phoneLabel": "Phone",
     "githubLabel": "GitHub",
-    "linkedinLabel": "LinkedIn"
+    "linkedinLabel": "LinkedIn",
+    "facebookLabel": "Facebook"
   },
   "Education": {
     "title": "Education"

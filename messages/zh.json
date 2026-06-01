@@ -19,7 +19,8 @@
     "emailLabel": "电子邮件",
     "phoneLabel": "电话",
     "githubLabel": "GitHub",
-    "linkedinLabel": "LinkedIn"
+    "linkedinLabel": "LinkedIn",
+    "facebookLabel": "Facebook"
   },
   "Education": {
     "title": "教育背景"

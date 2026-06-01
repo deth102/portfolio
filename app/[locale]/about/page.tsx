@@ -9,7 +9,7 @@ const contacts = [
   {
     labelKey: "phoneLabel" as const,
     value: "+84 8790 999 48",
-    href: "tel:+84 8790 999 48",
+    href: "tel:+84879099948",
   },
   {
     labelKey: "githubLabel" as const,
@@ -20,6 +20,11 @@ const contacts = [
     labelKey: "linkedinLabel" as const,
     value: "linkedin.com/in/cuongmanhnguyen",
     href: "https://www.linkedin.com/in/cuongnm1812/",
+  },
+  {
+    labelKey: "facebookLabel" as const,
+    value: "facebook.com/deth1812/",
+    href: "https://www.facebook.com/deth1812/",
   },
 ];
 

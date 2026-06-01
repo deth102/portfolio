@@ -15,6 +15,15 @@ const links: IconLink[] = [
     ),
   },
   {
+    href: "https://www.facebook.com/deth1812/",
+    label: "Facebook",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+        <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.12 8.44 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99C18.34 21.12 22 17 22 12z" />
+      </svg>
+    ),
+  },
+  {
     href: "https://www.instagram.com/deth_18.12/",
     label: "Instagram",
     icon: (
