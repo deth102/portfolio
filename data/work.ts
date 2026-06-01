@@ -29,7 +29,7 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
         "Vercel",
       ],
       highlights: [
-        "Publications page reads a single BibTeX string. Paste an entry, it parses and groups by year — no manual list to maintain.",
+        "Publications page reads a single BibTeX string. Paste an entry, it parses and groups by year, no manual list to maintain.",
         "News and event captions are written in Vietnamese; English is generated on the fly via Google Translate and cached forever.",
         "Vietnamese names are reordered to Western form automatically (PGS.TS Nguyễn Trọng Du → A/Prof Trong-Du Nguyen), with academic titles mapped to English.",
         "Sitemap with hreflang, robots.txt, ownership verified on Google Search Console.",
@@ -77,7 +77,7 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
         "Vercel",
       ],
       highlights: [
-        "Trang publications đọc thẳng một chuỗi BibTeX. Dán entry vào là parse xong và group theo năm — không phải maintain list thủ công.",
+        "Trang publications đọc thẳng một chuỗi BibTeX. Dán entry vào là parse xong và group theo năm, không phải maintain list thủ công.",
         "News và caption sự kiện viết bằng tiếng Việt; bản tiếng Anh tự sinh qua Google Translate và cache vĩnh viễn.",
         "Tên Việt tự sắp xếp theo thứ tự Western (PGS.TS Nguyễn Trọng Du → A/Prof Trong-Du Nguyen), chức danh học thuật map sang tiếng Anh.",
         "Sitemap có hreflang, robots.txt, đã verify ownership trên Google Search Console.",
@@ -125,7 +125,7 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
         "Vercel",
       ],
       highlights: [
-        "论文页直接读取一段 BibTeX 字符串。粘一个 entry 进去就自动解析、按年份分组，不用手动维护列表。",
+        "论文页直接读取段 BibTeX 字符串。粘一个 entry 进去就自动解析、按年份分组，不用手动维护列表。",
         "新闻和活动文案用越南语写，英文版本通过 Google Translate 实时生成并永久缓存。",
         "越南语姓名自动转成西方顺序（PGS.TS Nguyễn Trọng Du → A/Prof Trong-Du Nguyen），学术头衔也映射成英文。",
         "Sitemap 带 hreflang、robots.txt，已在 Google Search Console 通过站点验证。",
