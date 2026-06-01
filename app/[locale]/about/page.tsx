@@ -19,7 +19,7 @@ const contacts = [
   {
     labelKey: "linkedinLabel" as const,
     value: "linkedin.com/in/cuongmanhnguyen",
-    href: "https://www.linkedin.com/in/c%C6%B0%E1%BB%9Dng-nguy%E1%BB%85n-m%E1%BA%A1nh-b23102395/",
+    href: "https://www.linkedin.com/in/cuongnm1812/",
   },
 ];
 
