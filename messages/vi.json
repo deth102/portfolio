@@ -7,11 +7,9 @@
   "Home": {
     "greeting": "Xin chào, tôi là",
     "name": "Nguyễn Mạnh Cường",
-    "tagline": "Kỹ sư AI · Chẩn đoán lỗi từ tín hiệu rung & Edge AI",
-    "bio": "Kỹ sư Cơ điện tử HUST. Phần lớn thời gian tôi làm AI chẩn đoán lỗi công nghiệp và backend cho các sản phẩm LLM. Tôi nhận làm các dự án web từ cá nhân đến tổ chức nhỏ (Có thể tham khảo sản phẩm website ở bên dưới).",
-    "photoPlaceholder": "Ảnh của bạn",
-    "availability": "Đang nhận dự án freelance",
-    "availabilityDetail": "Web · LLM · Mô hình hóa cơ cấu (Toán / FEM)"
+    "tagline": "Kỹ sư AI · Chẩn đoán lỗi các thiết bị cơ khí từ đa tín hiệu",
+    "bio": ". Phần lớn thời gian tôi nghiên cứu việc ứng dụng AI vào chẩn đoán lỗi các thiết bị công nghiệp, đặc biệt là các thiết bị quay. Phân tích các phổ tần số, các đặc trưng hư hỏng của ổ bi, trục, bánh răng,... để phát hiện hư hỏng sau đó sẽ tự động hóa bằng AI",
+    "photoPlaceholder": "Ảnh của bạn"
   },
   "About": {
     "title": "Liên hệ",
@@ -46,7 +44,7 @@
     "learnMore": "Đọc thêm"
   },
   "Work": {
-    "title": "Dự án công việc",
+    "title": "Dự án ngoài nghiên cứu",
     "roleLabel": "Vai trò",
     "stackLabel": "Stack",
     "highlightsLabel": "Điểm nổi bật",

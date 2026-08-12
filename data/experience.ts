@@ -9,6 +9,12 @@ export type Experience = {
 // EDIT THIS FILE TO UPDATE YOUR EXPERIENCE TIMELINE.
 // Items appear top → bottom (newest first is conventional).
 export const experiences: Experience[] = [
+    {
+    role: "Research Assistant",
+    company: "Precision Transmission Lab",
+    period: "from September 2026",
+    description: "",
+  },
   {
     role: "Backend Developer",
     company: "Aladin",
