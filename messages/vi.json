@@ -21,7 +21,11 @@
     "facebookLabel": "Facebook"
   },
   "Education": {
-    "title": "Học vấn"
+    "title": "Học vấn",
+    "items": {
+      "master": {"degree": "Thạc sĩ Kỹ thuật Cơ khí", "school": "Đại học Quốc lập Trung ương", "location": "Đài Loan", "period": "2026 - nay"},
+      "bachelor": {"degree": "Kỹ sư Cơ điện tử", "school": "Đại học Bách khoa Hà Nội", "location": "Hà Nội, Việt Nam", "period": "2021 - 2025", "note": "Tiếng Anh B2"}
+    }
   },
   "Skills": {
     "title": "Kỹ năng",
@@ -35,7 +39,12 @@
     "researchList": "Xử lý tín hiệu cho phát hiện lỗi, Phân tích rung động, PHM, Dự báo RUL, Explainable AI, Transfer Learning"
   },
   "Experience": {
-    "title": "Kinh nghiệm"
+    "title": "Kinh nghiệm",
+    "items": {
+      "researchAssistant": {"role": "Trợ lý nghiên cứu", "company": "Phòng thí nghiệm Truyền động Chính xác", "period": "từ tháng 9/2026"},
+      "backendDeveloper": {"role": "Lập trình viên Backend", "company": "Aladin", "period": "năm 2026"},
+      "phmResearcher": {"role": "Nghiên cứu viên PHM", "company": "ITD Lab — Đại học Bách khoa Hà Nội", "period": "2025 - nay"}
+    }
   },
   "Research": {
     "title": "Nghiên cứu",

@@ -1,5 +1,5 @@
-import { getTranslations } from "next-intl/server";
-import { educations } from "@/data/education";
+import {getTranslations} from "next-intl/server";
+import {educations} from "@/data/education";
 
 export default async function Education() {
   const t = await getTranslations("Education");
@@ -11,19 +11,22 @@ export default async function Education() {
       </h2>
 
       <ol className="mt-10 relative border-l-2 border-border/60 ml-3 space-y-10">
-        {educations.map((edu, i) => (
-          <li key={i} className="pl-8 relative">
+        {educations.map((edu) => (
+          <li key={edu.id} className="pl-8 relative">
             <span
               aria-hidden
               className="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-foreground border-4 border-background"
             />
-            <h3 className="text-xl font-semibold">{edu.degree}</h3>
+            <h3 className="text-xl font-semibold">
+              {t(`items.${edu.id}.degree`)}
+            </h3>
             <p className="mt-1 text-sm text-muted">
-              {edu.school} • {edu.location} • {edu.period}
+              {t(`items.${edu.id}.school`)} • {t(`items.${edu.id}.location`)} •{" "}
+              {t(`items.${edu.id}.period`)}
             </p>
-            {edu.note && (
+            {edu.hasNote && (
               <p className="mt-3 text-foreground/80 leading-relaxed max-w-3xl">
-                {edu.note}
+                {t(`items.${edu.id}.note`)}
               </p>
             )}
           </li>

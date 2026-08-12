@@ -10,8 +10,6 @@ type Props = {
   name: string;
   tagline: string;
   bio: string;
-  availability: string;
-  availabilityDetail: string;
 };
 
 export default function HeroIntro({
@@ -19,8 +17,6 @@ export default function HeroIntro({
   name,
   tagline,
   bio,
-  availability,
-  availabilityDetail,
 }: Props) {
   const root = useRef<HTMLElement>(null);
 
@@ -40,11 +36,6 @@ export default function HeroIntro({
           opacity: 0,
           duration: 1.1,
         })
-          .from(
-            ".hero-status",
-            { y: 12, opacity: 0, duration: 0.5 },
-            "-=0.8"
-          )
           .from(
             ".hero-greeting",
             { y: 20, opacity: 0, duration: 0.6 },
@@ -76,7 +67,6 @@ export default function HeroIntro({
         gsap.set(
           [
             ".hero-photo",
-            ".hero-status",
             ".hero-greeting",
             ".hero-name",
             ".hero-tagline",
@@ -107,21 +97,7 @@ export default function HeroIntro({
 
       <div className="relative grid grid-cols-1 items-center gap-12 md:grid-cols-[1fr_auto]">
         <div className="max-w-2xl">
-          <a
-            href="mailto:cuongnm003@gmail.com"
-            className="hero-status group inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/5 px-3 py-1.5 text-xs md:text-sm font-medium text-emerald-700 dark:text-emerald-400 hover:border-emerald-500/60 hover:bg-emerald-500/10 transition-colors"
-            aria-label={`${availability} — ${availabilityDetail}`}
-          >
-            <span className="relative flex h-2 w-2 shrink-0">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-            </span>
-            <span>{availability}</span>
-            <span className="text-emerald-700/60 dark:text-emerald-400/60">
-              · {availabilityDetail}
-            </span>
-          </a>
-          <p className="hero-greeting mt-5 text-base md:text-lg text-muted">
+          <p className="hero-greeting text-base md:text-lg text-muted">
             {greeting}
           </p>
           <h1 className="hero-name mt-2 text-4xl font-bold tracking-tight md:text-6xl">

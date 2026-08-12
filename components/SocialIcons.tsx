@@ -69,11 +69,40 @@ const links: IconLink[] = [
       </svg>
     ),
   },
+  {
+    href: "https://scholar.google.com/citations?user=6d8KpFQAAAAJ&hl=vi",
+    label: "Google Scholar",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="h-5 w-5"
+      >
+        <path d="M2.5 9 12 4l9.5 5L12 14 2.5 9Z" />
+        <path d="M6.5 11.2V16c2.8 2.4 8.2 2.4 11 0v-4.8" />
+        <path d="M21.5 9v6" />
+      </svg>
+    ),
+  },
+  {
+    href: "https://www.researchgate.net/profile/Cuong-Nguyen-343?ev=hdr_xprf",
+    label: "ResearchGate",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+        <path d="M5 3h7.2c3.8 0 6.1 2 6.1 5.2 0 2.2-1.1 3.8-3.1 4.6L19.5 21h-4.1l-3.8-7.4H8.7V21H5V3Zm3.7 3.1v4.5h3.1c1.8 0 2.8-.8 2.8-2.3s-1-2.2-2.8-2.2H8.7Z" />
+        <circle cx="19.5" cy="4.5" r="2.5" />
+      </svg>
+    ),
+  },
 ];
 
 export default function SocialIcons() {
   return (
-    <ul className="flex items-center gap-5">
+    <ul className="flex flex-wrap items-center gap-3 sm:gap-5">
       {links.map((l) => (
         <li key={l.label}>
           <a

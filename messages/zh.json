@@ -8,7 +8,7 @@
     "greeting": "你好，我是",
     "name": "阮孟强 (Henry)",
     "tagline": "AI 工程师 · 基于振动信号的故障诊断与边缘 AI",
-    "bio": "河内科技大学机电一体化工程师。主要做工业故障诊断 AI 和 LLM 产品的后端，业余写写网站。",
+    "bio": "我大部分时间都在研究人工智能在工业设备故障诊断中的应用，尤其是旋转机械。我通过分析频谱以及轴承、轴和齿轮等部件的故障特征来识别故障，并进一步利用人工智能实现诊断自动化。",
     "photoPlaceholder": "你的照片"
   },
   "About": {
@@ -21,7 +21,11 @@
     "facebookLabel": "Facebook"
   },
   "Education": {
-    "title": "教育背景"
+    "title": "教育背景",
+    "items": {
+      "master": {"degree": "机械工程硕士", "school": "国立中央大学", "location": "台湾", "period": "2026年至今"},
+      "bachelor": {"degree": "机电一体化工程学士", "school": "河内理工大学", "location": "越南河内", "period": "2021年至2025年", "note": "良好等级毕业 · 英语 B2"}
+    }
   },
   "Skills": {
     "title": "技能",
@@ -35,7 +39,12 @@
     "researchList": "故障检测信号处理、振动分析、PHM、剩余寿命预测、可解释 AI、迁移学习"
   },
   "Experience": {
-    "title": "工作经历"
+    "title": "工作经历",
+    "items": {
+      "researchAssistant": {"role": "研究助理", "company": "精密传动实验室", "period": "自2026年9月起"},
+      "backendDeveloper": {"role": "后端开发工程师", "company": "Aladin", "period": "2026年"},
+      "phmResearcher": {"role": "PHM 研究员", "company": "ITD 实验室 — 河内理工大学", "period": "2025年至今"}
+    }
   },
   "Research": {
     "title": "研究",
