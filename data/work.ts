@@ -16,10 +16,11 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
   en: [
     {
       name: "ITD Lab Website",
-      tagline: "Bilingual lab site, every animation handwritten",
+      tagline: "A bilingual home for ITD Lab",
       description:
-        "Designed and built itdhust.com for the Intelligent Technical Diagnostics Lab at HUST. Six bilingual pages (EN / VI): a publications archive driven by BibTeX, an auto-translated news feed, member directory, admissions, and an events gallery. Every animation is hand-written in GSAP — scroll reveals, a cursor spotlight, 3D-tilt cards, magnetic buttons, an aurora background, and a partner marquee.",
-      role: "Built it solo: design, frontend, content schema, SEO, deployment.",
+        "I built this website to give ITD Lab a clear place to share its research, members, publications, and activities. It is available in Vietnamese and English, helping students and research partners quickly understand what the lab does and how to get in touch.",
+      role:
+        "I handled the project from design and development to organizing the content and deploying the finished website.",
       stack: [
         "Next.js 16",
         "TypeScript",
@@ -29,10 +30,9 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
         "Vercel",
       ],
       highlights: [
-        "Publications page reads a single BibTeX string. Paste an entry, it parses and groups by year, no manual list to maintain.",
-        "News and event captions are written in Vietnamese; English is generated on the fly via Google Translate and cached forever.",
-        "Vietnamese names are reordered to Western form automatically (PGS.TS Nguyễn Trọng Du → A/Prof Trong-Du Nguyen), with academic titles mapped to English.",
-        "Sitemap with hreflang, robots.txt, ownership verified on Google Search Console.",
+        "Publications are updated from BibTeX and automatically organized by year, making new papers quick to add.",
+        "News, events, member profiles, and admissions information each have a clear place and are easy to update.",
+        "The site works well on phones, supports Vietnamese and English, and is prepared for search engines.",
       ],
       url: "https://itdhust.com",
       period: "2026",
@@ -64,10 +64,11 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
   vi: [
     {
       name: "Website ITD Lab",
-      tagline: "Trang lab song ngữ, animation tự viết tay",
+      tagline: "Nơi giới thiệu phòng thí nghiệm ITD",
       description:
-        "Tự xây itdhust.com cho lab Intelligent Technical Diagnostics ở HUST. Sáu trang song ngữ Anh – Việt: trang publications đọc trực tiếp từ BibTeX, news tự dịch sang tiếng Anh, danh sách thành viên, trang tuyển sinh và gallery sự kiện. Mọi animation viết tay bằng GSAP: scroll reveal, spotlight bám cursor, thẻ tilt 3D, nút magnetic, nền aurora, marquee partner.",
-      role: "Một mình từ đầu đến cuối: thiết kế, frontend, cấu trúc nội dung, SEO, deploy.",
+        "Tôi xây dựng website này để phòng thí nghiệm ITD có một nơi giới thiệu các hướng nghiên cứu, thành viên, bài báo và hoạt động của nhóm. Trang có cả tiếng Việt và tiếng Anh, giúp sinh viên cũng như các nhóm nghiên cứu dễ tìm hiểu và liên hệ với phòng thí nghiệm.",
+      role:
+        "Tôi tự thiết kế và phát triển website, sắp xếp nội dung, tối ưu hiển thị trên điện thoại và đưa trang lên hoạt động.",
       stack: [
         "Next.js 16",
         "TypeScript",
@@ -77,10 +78,9 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
         "Vercel",
       ],
       highlights: [
-        "Trang publications đọc thẳng một chuỗi BibTeX. Dán entry vào là parse xong và group theo năm, không phải maintain list thủ công.",
-        "News và caption sự kiện viết bằng tiếng Việt; bản tiếng Anh tự sinh qua Google Translate và cache vĩnh viễn.",
-        "Tên Việt tự sắp xếp theo thứ tự Western (PGS.TS Nguyễn Trọng Du → A/Prof Trong-Du Nguyen), chức danh học thuật map sang tiếng Anh.",
-        "Sitemap có hreflang, robots.txt, đã verify ownership trên Google Search Console.",
+        "Bài báo được cập nhật từ BibTeX và tự sắp xếp theo năm, nên việc bổ sung công bố mới khá nhanh.",
+        "Tin tức, sự kiện, thông tin thành viên và tuyển sinh được trình bày rõ ràng, dễ tìm và dễ cập nhật.",
+        "Website hiển thị tốt trên điện thoại, có hai ngôn ngữ Việt - Anh và được chuẩn bị để dễ xuất hiện trên Google.",
       ],
       url: "https://itdhust.com",
       period: "2026",
@@ -112,10 +112,10 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
   zh: [
     {
       name: "ITD Lab 网站",
-      tagline: "双语实验室网站，所有动效手写",
+      tagline: "ITD 实验室的双语主页",
       description:
-        "独立设计并开发 itdhust.com，河内科技大学（HUST）Intelligent Technical Diagnostics Lab 的官方网站。六个双语（英语 / 越南语）页面：论文页直接读取 BibTeX、新闻自动翻译、成员列表、招生页面、活动相册。所有动效用 GSAP 手写：滚动揭示、跟随鼠标的聚光灯、3D 倾斜卡片、磁吸按钮、极光背景、合作机构走马灯。",
-      role: "一个人从头做到尾：设计、前端、内容结构、SEO、部署上线。",
+        "我为 ITD 实验室搭建了这个网站，用来集中介绍研究方向、团队成员、论文和日常活动。网站提供越南语和英语版本，方便学生与合作团队了解实验室，并快速找到联系方式。",
+      role: "我独立完成了网站设计、开发、内容整理、移动端适配和上线部署。",
       stack: [
         "Next.js 16",
         "TypeScript",
@@ -125,10 +125,9 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
         "Vercel",
       ],
       highlights: [
-        "论文页直接读取段 BibTeX 字符串。粘一个 entry 进去就自动解析、按年份分组，不用手动维护列表。",
-        "新闻和活动文案用越南语写，英文版本通过 Google Translate 实时生成并永久缓存。",
-        "越南语姓名自动转成西方顺序（PGS.TS Nguyễn Trọng Du → A/Prof Trong-Du Nguyen），学术头衔也映射成英文。",
-        "Sitemap 带 hreflang、robots.txt，已在 Google Search Console 通过站点验证。",
+        "论文信息从 BibTeX 更新并自动按年份整理，添加新论文更方便。",
+        "新闻、活动、成员介绍和招生信息分类清楚，查找和维护都比较简单。",
+        "网站适配手机，支持越南语和英语，并针对搜索引擎做了基础优化。",
       ],
       url: "https://itdhust.com",
       period: "2026",

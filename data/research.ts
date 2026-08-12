@@ -14,12 +14,14 @@ export type Research = {
 
 const publicationUrl =
   "https://link.springer.com/chapter/10.1007/978-3-032-29469-2_30";
+const publicationTitle =
+  "Lightweight Machine Learning for Edge-Based Machinery Fault Diagnosis";
 
 // Outer keys ("en", "vi", "zh") match locales in i18n/routing.ts.
 export const researches: Record<"en" | "vi" | "zh", Research[]> = {
   en: [
     {
-      title: "Lightweight Machine Learning for Edge-Based Machinery Fault Diagnosis",
+      title: publicationTitle,
       role: "First author",
       period: "ISRM 2026 · Springer Nature, 2027",
       problem:
@@ -46,7 +48,7 @@ export const researches: Record<"en" | "vi" | "zh", Research[]> = {
   ],
   vi: [
     {
-      title: "Học máy nhẹ cho chẩn đoán lỗi máy móc trên thiết bị biên",
+      title: publicationTitle,
       role: "Tác giả đầu tiên",
       period: "ISRM 2026 · Springer Nature, 2027",
       problem:
@@ -73,7 +75,7 @@ export const researches: Record<"en" | "vi" | "zh", Research[]> = {
   ],
   zh: [
     {
-      title: "面向边缘机械故障诊断的轻量级机器学习",
+      title: publicationTitle,
       role: "第一作者",
       period: "ISRM 2026 · Springer Nature，2027",
       problem:
