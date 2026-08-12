@@ -8,7 +8,7 @@
   --muted: #6b7280;
   --card: #f5f5f4;
   --border: #e7e5e4;
-  --brand: #ea580c;
+  --brand: #adc2cb;
 }
 
 .dark {
@@ -17,7 +17,7 @@
   --muted: #a1a1aa;
   --card: #18181b;
   --border: #27272a;
-  --brand: #fb923c;
+  --brand: #adc2cb;
 }
 
 @theme inline {

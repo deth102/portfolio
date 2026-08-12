@@ -10,22 +10,23 @@ export type Experience = {
 // Items appear top → bottom (newest first is conventional).
 export const experiences: Experience[] = [
     {
-    role: "Research Assistant",
-    company: "Precision Transmission Lab",
-    period: "from September 2026",
+    role: "Trợ lý nghiên cứu",
+    company: "Phòng thí nghiệm Truyền động Chính xác",
+    companyUrl: "https://sites.google.com/view/me-ncu-edu-tw-ptl/home",
+    period: "từ tháng 9/2026",
     description: "",
   },
   {
-    role: "Backend Developer",
+    role: "Lập trình viên Backend",
     company: "Aladin",
-    period: "in 2026",
+    period: "năm 2026",
     description: "",
   },
   {
-    role: "PHM Researcher",
-    company: "ITD Lab — Hanoi University of Science and Technology",
+    role: "Nghiên cứu viên PHM",
+    company: "ITD Lab — Đại học Bách khoa Hà Nội",
     companyUrl: "https://itdhust.com",
-    period: "2025 - Present",
+    period: "2025 - nay",
     description: "",
   },
 ];

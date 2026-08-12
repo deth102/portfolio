@@ -9,16 +9,16 @@ export type Education = {
 // EDIT THIS FILE TO UPDATE YOUR EDUCATION TIMELINE.
 export const educations: Education[] = [
     {
-    degree: "Master of Mechanical Engineering",
-    school: "National Central University",
-    location: "Taiwan",
-    period: "2026 - present",
+    degree: "Thạc sĩ Kỹ thuật Cơ khí",
+    school: "Đại học Quốc lập Trung ương",
+    location: "Đài Loan",
+    period: "2026 - nay",
   },
   {
-    degree: "Bachelor of Engineering, Mechatronics",
-    school: "Hanoi University of Science and Technology",
-    location: "Hanoi, Vietnam",
+    degree: "Kỹ sư Cơ điện tử",
+    school: "Đại học Bách khoa Hà Nội",
+    location: "Hà Nội, Việt Nam",
     period: "2021 - 2025",
-    note: "Good Degree · English B2",
+    note: "Tốt nghiệp loại Khá · Tiếng Anh B2",
   },
 ];
