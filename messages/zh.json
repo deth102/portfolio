@@ -23,7 +23,7 @@
     "messagePlaceholder": "你好，Cường，我想和你交流一下……",
     "sendMessage": "发送留言",
     "sendingMessage": "正在发送……",
-    "privacyNote": "留言将直接发送，无需打开您设备上的邮件应用。",
+    "privacyNote": "留言将通过 FormSubmit 转发，无需打开您设备上的邮件应用。",
     "messageSent": "留言已成功发送，谢谢！",
     "messageError": "暂时无法发送留言，请稍后重试或直接通过电子邮件联系我。",
     "detailsTitle": "联系方式",

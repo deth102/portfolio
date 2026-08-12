@@ -24,7 +24,7 @@ const links: IconLink[] = [
     ),
   },
   {
-    href: "https://www.instagram.com/deth_18.12/",
+    href: "https://www.instagram.com/nmcphd/",
     label: "Instagram",
     icon: (
       <svg

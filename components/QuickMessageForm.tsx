@@ -24,6 +24,8 @@ type Status = "idle" | "submitting" | "success" | "error";
 
 const fieldClassName =
   "mt-2 w-full rounded-2xl border border-border/80 bg-background/70 px-4 py-3.5 text-foreground outline-none transition placeholder:text-muted/60 focus:border-brand focus:ring-4 focus:ring-brand/10";
+const formSubmitEndpoint =
+  "https://formsubmit.co/ajax/cuongnm003@gmail.com";
 
 export default function QuickMessageForm({labels}: Props) {
   const [status, setStatus] = useState<Status>("idle");
@@ -41,13 +43,33 @@ export default function QuickMessageForm({labels}: Props) {
     setStatus("submitting");
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch(formSubmitEndpoint, {
         method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({name, email, message, website}),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+          _subject: `New portfolio message from ${name}`,
+          _template: "table",
+          _captcha: "false",
+          _honey: website,
+          _url: window.location.href,
+        }),
       });
 
-      if (!response.ok) {
+      const result = (await response.json()) as {
+        success?: boolean | string;
+      };
+
+      if (
+        !response.ok ||
+        result.success === false ||
+        result.success === "false"
+      ) {
         throw new Error("Unable to send message");
       }
 

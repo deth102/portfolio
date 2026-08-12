@@ -23,7 +23,7 @@
     "messagePlaceholder": "Xin chào Cường, tôi muốn trao đổi với bạn về...",
     "sendMessage": "Gửi tin nhắn",
     "sendingMessage": "Đang gửi...",
-    "privacyNote": "Tin nhắn được gửi trực tiếp và không mở ứng dụng email trên thiết bị của bạn.",
+    "privacyNote": "Tin nhắn được chuyển tiếp qua FormSubmit và không mở ứng dụng email trên thiết bị của bạn.",
     "messageSent": "Tin nhắn đã được gửi thành công. Cảm ơn bạn!",
     "messageError": "Chưa thể gửi tin nhắn. Vui lòng thử lại sau hoặc liên hệ trực tiếp qua email.",
     "detailsTitle": "Thông tin liên hệ",

@@ -23,7 +23,7 @@
     "messagePlaceholder": "Hi Cuong, I would like to talk with you about...",
     "sendMessage": "Send message",
     "sendingMessage": "Sending...",
-    "privacyNote": "Your message is sent directly without opening an email app on your device.",
+    "privacyNote": "Your message is forwarded through FormSubmit without opening an email app on your device.",
     "messageSent": "Your message has been sent successfully. Thank you!",
     "messageError": "Your message could not be sent. Please try again later or contact me directly by email.",
     "detailsTitle": "Contact details",
