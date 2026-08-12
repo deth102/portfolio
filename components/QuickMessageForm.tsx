@@ -3,7 +3,6 @@
 import {useState, type FormEvent} from "react";
 
 type Props = {
-  recipient: string;
   labels: {
     title: string;
     description: string;
@@ -14,31 +13,49 @@ type Props = {
     message: string;
     messagePlaceholder: string;
     submit: string;
+    submitting: string;
     privacy: string;
-    opened: string;
-    subjectPrefix: string;
+    success: string;
+    error: string;
   };
 };
+
+type Status = "idle" | "submitting" | "success" | "error";
 
 const fieldClassName =
   "mt-2 w-full rounded-2xl border border-border/80 bg-background/70 px-4 py-3.5 text-foreground outline-none transition placeholder:text-muted/60 focus:border-brand focus:ring-4 focus:ring-brand/10";
 
-export default function QuickMessageForm({recipient, labels}: Props) {
-  const [opened, setOpened] = useState(false);
+export default function QuickMessageForm({labels}: Props) {
+  const [status, setStatus] = useState<Status>("idle");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     const name = String(formData.get("name") ?? "").trim();
     const email = String(formData.get("email") ?? "").trim();
     const message = String(formData.get("message") ?? "").trim();
-    const subject = `${labels.subjectPrefix} — ${name}`;
-    const body = `${labels.name}: ${name}\n${labels.email}: ${email}\n\n${message}`;
-    const mailto = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const website = String(formData.get("website") ?? "").trim();
 
-    setOpened(true);
-    window.location.href = mailto;
+    setStatus("submitting");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({name, email, message, website}),
+      });
+
+      if (!response.ok) {
+        throw new Error("Unable to send message");
+      }
+
+      form.reset();
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -68,6 +85,16 @@ export default function QuickMessageForm({recipient, labels}: Props) {
         <p className="mt-2 leading-relaxed text-muted">{labels.description}</p>
 
         <form className="mt-7 space-y-5" onSubmit={handleSubmit}>
+          <div className="absolute -left-[9999px]" aria-hidden>
+            <label htmlFor="quick-message-website">Website</label>
+            <input
+              id="quick-message-website"
+              name="website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+            />
+          </div>
           <div>
             <label htmlFor="quick-message-name" className="text-sm font-semibold">
               {labels.name}
@@ -114,9 +141,11 @@ export default function QuickMessageForm({recipient, labels}: Props) {
 
           <button
             type="submit"
-            className="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-foreground px-5 py-3.5 font-semibold text-background shadow-lg transition hover:-translate-y-0.5 hover:bg-brand hover:text-slate-950 hover:shadow-brand/20 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand/30"
+            disabled={status === "submitting"}
+            aria-busy={status === "submitting"}
+            className="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-foreground px-5 py-3.5 font-semibold text-background shadow-lg transition hover:-translate-y-0.5 hover:bg-brand hover:text-slate-950 hover:shadow-brand/20 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand/30 disabled:cursor-wait disabled:opacity-60 disabled:hover:translate-y-0"
           >
-            {labels.submit}
+            {status === "submitting" ? labels.submitting : labels.submit}
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -135,8 +164,13 @@ export default function QuickMessageForm({recipient, labels}: Props) {
           <p className="text-center text-xs leading-relaxed text-muted">
             {labels.privacy}
           </p>
-          <p aria-live="polite" className="text-center text-sm font-medium text-brand">
-            {opened ? labels.opened : ""}
+          <p
+            aria-live="polite"
+            className={`text-center text-sm font-medium ${
+              status === "error" ? "text-red-500" : "text-emerald-600 dark:text-emerald-400"
+            }`}
+          >
+            {status === "success" ? labels.success : status === "error" ? labels.error : ""}
           </p>
         </form>
       </div>

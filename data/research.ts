@@ -12,103 +12,90 @@ export type Research = {
   url?: string;
 };
 
-// EDIT THIS FILE TO UPDATE YOUR RESEARCH TOPICS.
+const publicationUrl =
+  "https://link.springer.com/chapter/10.1007/978-3-032-29469-2_30";
+
 // Outer keys ("en", "vi", "zh") match locales in i18n/routing.ts.
 export const researches: Record<"en" | "vi" | "zh", Research[]> = {
   en: [
     {
-      title:
-        "Fault Diagnosis of Planetary Roller Screws via Digital Twin + Transfer Learning",
-      role: "Master's Researcher",
-      period: "24 months (2026–2028)",
+      title: "Lightweight Machine Learning for Edge-Based Machinery Fault Diagnosis",
+      role: "First author",
+      period: "ISRM 2026 · Springer Nature, 2027",
       problem:
-        "Planetary Roller Screws (PRS) are high-precision actuators used in robotics, aerospace and CNC machines, but real-world failure data is extremely scarce, preventing direct training of conventional deep-learning models.",
+        "Deploying machinery fault diagnosis on affordable edge devices is constrained by the memory, latency, and computational demands of heavyweight AI. This study presents a compact framework that combines frequency-domain signal features with optimized classical machine-learning models for fast, on-device diagnosis without relying on the cloud.",
       approach: [
         {
-          name: "Analytical model",
+          name: "Signal processing",
           description:
-            "Hertzian 3-body contact + 6-DOF Lagrangian dynamics; compute the characteristic frequencies RPF / RSF / NBF.",
+            "Two-axis vibration signals sampled at 25.6 kHz are divided into non-overlapping 8,192-sample windows. FFT is then used to extract ten compact spectral features.",
         },
         {
-          name: "Digital Twin",
+          name: "Lightweight models",
           description:
-            "Roller FEA in ANSYS → export MNF → rigid-flex integration in MSC Adams. Sweep fault parameters (pitting / crack / wear / preload loss), validated to <10% error vs. analytical frequencies.",
+            "An optimized Random Forest and Softmax Regression classify five machine conditions: normal, rotor unbalance, shaft misalignment, inner-race fault, and outer-race fault.",
         },
         {
-          name: "Simulation dataset",
+          name: "Results",
           description:
-            "48 scenarios × 100 s @ 20 kHz, 1 s sliding window with 90% overlap; physical features (kurtosis RPF/NBF, VMD) + 1D-CNN deep features.",
-        },
-        {
-          name: "Transfer Learning",
-          description:
-            "Compare three strategy families: instance-based (TrAdaBoost+KLIEP), feature-based (MMD/CORAL/DANN-lite), adversarial (CDAN/MCD) to reduce the simulation↔real domain gap.",
+            "The 10-tree Random Forest achieves 99.52% test accuracy using 194,380 bytes of RAM, with an estimated latency of 33.6 ms per window on an ESP32. Optimization cuts both memory use and inference latency by more than 50%.",
         },
       ],
+      url: publicationUrl,
     },
   ],
   vi: [
     {
-      title:
-        "Chẩn đoán hỏng hóc Vít-me bi đũa hành tinh bằng Digital Twin + Transfer Learning",
-      role: "Nghiên cứu sinh Thạc sĩ",
-      period: "24 tháng (2026–2028)",
+      title: "Học máy nhẹ cho chẩn đoán lỗi máy móc trên thiết bị biên",
+      role: "Tác giả đầu tiên",
+      period: "ISRM 2026 · Springer Nature, 2027",
       problem:
-        "Planetary Roller Screw (PRS) là cơ cấu truyền động chính xác cao dùng trong robot, hàng không, máy CNC nhưng dữ liệu hỏng thực tế cực kỳ khan hiếm, khiến các mô hình học sâu truyền thống không thể huấn luyện trực tiếp.",
+        "Việc đưa chẩn đoán lỗi máy móc lên các thiết bị biên giá rẻ bị giới hạn bởi bộ nhớ, độ trễ và chi phí tính toán của các mô hình AI nặng. Nghiên cứu đề xuất một khung nhỏ gọn, kết hợp đặc trưng tín hiệu miền tần số với các mô hình học máy cổ điển được tối ưu để chẩn đoán nhanh ngay trên thiết bị mà không phụ thuộc vào đám mây.",
       approach: [
         {
-          name: "Mô hình giải tích",
+          name: "Xử lý tín hiệu",
           description:
-            "Hertzian 3-body contact + 6-DOF Lagrangian dynamics, tính các tần số đặc trưng RPF / RSF / NBF.",
+            "Tín hiệu rung hai trục lấy mẫu ở 25,6 kHz được chia thành các cửa sổ 8.192 mẫu không chồng lấn; FFT sau đó trích xuất 10 đặc trưng phổ nhỏ gọn.",
         },
         {
-          name: "Digital Twin",
+          name: "Mô hình nhẹ",
           description:
-            "FEA con lăn trong ANSYS → xuất MNF → tích hợp rigid-flex trong MSC Adams; quét tham số hỏng (pitting / crack / wear / preload-loss), validate sai số <10% so với tần số giải tích.",
+            "Random Forest tối ưu và Softmax Regression phân loại 5 trạng thái: bình thường, mất cân bằng rôto, lệch trục, lỗi vòng trong và lỗi vòng ngoài ổ lăn.",
         },
         {
-          name: "Bộ dữ liệu mô phỏng",
+          name: "Kết quả",
           description:
-            "48 kịch bản × 100 s @ 20 kHz, cửa sổ trượt 1 s / 90% overlap; đặc trưng vật lý (kurtosis RPF/NBF, VMD) + đặc trưng học sâu 1D-CNN.",
-        },
-        {
-          name: "Transfer Learning",
-          description:
-            "So sánh 3 nhóm chiến lược: instance-based (TrAdaBoost+KLIEP), feature-based (MMD/CORAL/DANN-lite), adversarial (CDAN/MCD) để giảm domain gap mô phỏng↔thực.",
+            "Random Forest với 10 cây đạt độ chính xác kiểm thử 99,52%, sử dụng 194.380 byte RAM và có độ trễ ước tính 33,6 ms mỗi cửa sổ trên ESP32. Quá trình tối ưu giảm hơn 50% bộ nhớ và thời gian suy luận.",
         },
       ],
+      url: publicationUrl,
     },
   ],
   zh: [
     {
-      title:
-        "基于数字孪生 + 迁移学习的行星滚柱丝杠故障诊断",
-      role: "硕士研究生",
-      period: "24 个月 (2026–2028)",
+      title: "面向边缘机械故障诊断的轻量级机器学习",
+      role: "第一作者",
+      period: "ISRM 2026 · Springer Nature，2027",
       problem:
-        "行星滚柱丝杠（PRS）是机器人、航空航天和 CNC 机床中使用的高精度传动机构，但真实故障数据极其稀缺，使得传统深度学习模型无法直接训练。",
+        "在低成本边缘设备上部署机械故障诊断，往往受到大型 AI 模型在内存、延迟和计算量方面的限制。本研究提出一种紧凑框架，将频域信号特征与经过优化的经典机器学习模型相结合，在不依赖云端的情况下实现快速的设备端诊断。",
       approach: [
         {
-          name: "解析模型",
+          name: "信号处理",
           description:
-            "赫兹三体接触 + 6 自由度拉格朗日动力学；计算特征频率 RPF / RSF / NBF。",
+            "将采样率为 25.6 kHz 的双轴振动信号划分为不重叠的 8,192 点窗口，并通过 FFT 提取 10 个紧凑的频谱特征。",
         },
         {
-          name: "数字孪生",
+          name: "轻量级模型",
           description:
-            "在 ANSYS 中对滚柱进行 FEA → 导出 MNF → 在 MSC Adams 中进行刚柔耦合；扫描故障参数（点蚀 / 裂纹 / 磨损 / 预紧力损失），相对解析频率误差 < 10%。",
+            "采用优化后的随机森林和 Softmax 回归，对正常、转子不平衡、轴不对中、轴承内圈故障和外圈故障五种机械状态进行分类。",
         },
         {
-          name: "仿真数据集",
+          name: "实验结果",
           description:
-            "48 个场景 × 100 秒 @ 20 kHz，1 秒滑动窗口 90% 重叠；物理特征（kurtosis RPF/NBF, VMD）+ 1D-CNN 深度特征。",
-        },
-        {
-          name: "迁移学习",
-          description:
-            "比较三类策略：基于实例（TrAdaBoost+KLIEP）、基于特征（MMD/CORAL/DANN-lite）、对抗式（CDAN/MCD），以缩小仿真↔真实的域差距。",
+            "由 10 棵树组成的随机森林测试准确率达到 99.52%，占用 194,380 字节 RAM，在 ESP32 上的估算单窗口延迟为 33.6 ms。优化后，内存占用和推理延迟均降低了 50% 以上。",
         },
       ],
+      url: publicationUrl,
     },
   ],
 };

@@ -90,14 +90,10 @@ export default async function AboutPage({
         <h1 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">
           {t("title")}
         </h1>
-        <p className="mt-5 text-base leading-relaxed text-foreground/75 md:text-lg">
-          {t("intro")}
-        </p>
       </div>
 
       <div className="relative mt-12 grid items-start gap-8 lg:grid-cols-[1.08fr_0.92fr]">
         <QuickMessageForm
-          recipient={recipient}
           labels={{
             title: t("formTitle"),
             description: t("formDescription"),
@@ -108,9 +104,10 @@ export default async function AboutPage({
             message: t("messageLabel"),
             messagePlaceholder: t("messagePlaceholder"),
             submit: t("sendMessage"),
+            submitting: t("sendingMessage"),
             privacy: t("privacyNote"),
-            opened: t("emailOpened"),
-            subjectPrefix: t("subjectPrefix"),
+            success: t("messageSent"),
+            error: t("messageError"),
           }}
         />
 
@@ -146,12 +143,6 @@ export default async function AboutPage({
             ))}
           </div>
 
-          <div className="mt-7 rounded-2xl border border-brand/20 bg-brand/8 p-5">
-            <p className="font-semibold">{t("responseTitle")}</p>
-            <p className="mt-2 text-sm leading-relaxed text-muted">
-              {t("responseDescription")}
-            </p>
-          </div>
         </aside>
       </div>
     </section>
