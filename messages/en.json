@@ -54,7 +54,7 @@
   "Experience": {
     "title": "Experience",
     "items": {
-      "researchAssistant": {"role": "Research Assistant", "company": "Precision Transmission Lab", "period": "from September 2026"},
+      "researchAssistant": {"role": "Teaching Assistant", "company": "Precision Transmission Lab", "period": "from September 2026"},
       "backendDeveloper": {"role": "Backend Developer", "company": "Aladin", "period": "in 2026"},
       "phmResearcher": {"role": "PHM Researcher", "company": "ITD Lab — Hanoi University of Science and Technology", "period": "2025 - present"}
     }

@@ -54,7 +54,7 @@
   "Experience": {
     "title": "Kinh nghiệm",
     "items": {
-      "researchAssistant": {"role": "Trợ lý nghiên cứu", "company": "Phòng thí nghiệm Truyền động Chính xác", "period": "từ tháng 9/2026"},
+      "researchAssistant": {"role": "Trợ giảng", "company": "Phòng thí nghiệm Truyền động Chính xác", "period": "từ tháng 9/2026"},
       "backendDeveloper": {"role": "Lập trình viên Backend", "company": "Aladin", "period": "năm 2026"},
       "phmResearcher": {"role": "Nghiên cứu viên PHM", "company": "ITD Lab — Đại học Bách khoa Hà Nội", "period": "2025 - nay"}
     }
