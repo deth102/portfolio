@@ -54,7 +54,8 @@
   "Experience": {
     "title": "工作经历",
     "items": {
-      "researchAssistant": {"role": "研究助理", "company": "精密传动实验室", "period": "自2026年9月起"},
+      "researcher": {"role": "研究员", "company": "国家同步辐射研究中心（NSRRC）", "period": "自2026年10月起"},
+      "teachingAssistant": {"role": "助教", "company": "精密传动实验室", "period": "自2026年9月起"},
       "backendDeveloper": {"role": "后端开发工程师", "company": "Aladin", "period": "2026年"},
       "phmResearcher": {"role": "PHM 研究员", "company": "ITD 实验室 — 河内理工大学", "period": "2025年至今"}
     }

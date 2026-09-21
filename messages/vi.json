@@ -54,7 +54,8 @@
   "Experience": {
     "title": "Kinh nghiệm",
     "items": {
-      "researchAssistant": {"role": "Trợ giảng", "company": "Phòng thí nghiệm Truyền động Chính xác", "period": "từ tháng 9/2026"},
+      "researcher": {"role": "Nghiên cứu viên", "company": "Trung tâm Nghiên cứu Bức xạ Synchrotron Quốc gia (NSRRC)", "period": "từ tháng 10/2026"},
+      "teachingAssistant": {"role": "Trợ giảng", "company": "Phòng thí nghiệm Truyền động Chính xác", "period": "từ tháng 9/2026"},
       "backendDeveloper": {"role": "Lập trình viên Backend", "company": "Aladin", "period": "năm 2026"},
       "phmResearcher": {"role": "Nghiên cứu viên PHM", "company": "ITD Lab — Đại học Bách khoa Hà Nội", "period": "2025 - nay"}
     }
