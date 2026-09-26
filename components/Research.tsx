@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { researches } from "@/data/research";
+import { researches, selfAuthor } from "@/data/research";
 
 export default async function Research() {
   const t = await getTranslations("Research");
@@ -22,8 +22,22 @@ export default async function Research() {
               aria-label={`${r.title} — ${t("learnMore")}`}
               className="group flex items-start justify-between gap-4 rounded-2xl border border-border/60 bg-card/40 p-5 md:p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand/50 hover:bg-card/70"
             >
-              <span className="text-lg md:text-xl font-semibold tracking-tight leading-snug group-hover:text-brand">
-                {r.title}
+              <span>
+                <span className="block text-lg md:text-xl font-semibold tracking-tight leading-snug group-hover:text-brand">
+                  {r.title}
+                </span>
+                <span className="mt-2 block text-sm text-muted">
+                  {r.authors.map((a, i) => (
+                    <span key={a}>
+                      {i > 0 && ", "}
+                      {a === selfAuthor ? (
+                        <span className="font-semibold text-foreground">{a}</span>
+                      ) : (
+                        a
+                      )}
+                    </span>
+                  ))}
+                </span>
               </span>
               <svg
                 viewBox="0 0 24 24"
