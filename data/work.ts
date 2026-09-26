@@ -44,8 +44,7 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
         "Intelligent vibration monitoring & AI-based predictive maintenance for rotating equipment",
       description:
         "ITD Lab and the VICEM Institute of Cement Technology ran a 5-day intensive course (code VCN.VC.2026.13) for 18 engineers from 7 VICEM member units, going from vibration theory to AI methods for diagnostics and predictive maintenance.",
-      role:
-        "Instructor. I taught the entire 5-day program, both theory and hands-on sessions.",
+      role: "Instructor",
       highlights: [
         "Vibration monitoring foundations, maintenance strategies, the ISO 20816 standard, and an introduction to PHM and AI.",
         "Gear and rolling-bearing fault diagnosis (GMF, BPFO/BPFI/BSF/FTF, envelope spectrum) and vertical roller mill (VRM) diagnosis.",
@@ -132,8 +131,7 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
         "Giám sát rung động thông minh & bảo trì dự đoán dựa trên AI cho thiết bị quay",
       description:
         "ITD Lab phối hợp với Viện Công nghệ Xi măng VICEM tổ chức khóa đào tạo chuyên sâu 5 ngày (mã VCN.VC.2026.13) cho 18 kỹ sư đến từ 7 đơn vị thành viên của VICEM, đi từ lý thuyết rung động đến các phương pháp AI cho chẩn đoán và bảo trì dự đoán.",
-      role:
-        "Giảng viên. Tôi giảng dạy toàn bộ chương trình 5 ngày, cả lý thuyết lẫn thực hành.",
+      role: "Giảng viên",
       highlights: [
         "Nền tảng giám sát rung động, các chiến lược bảo trì, tiêu chuẩn ISO 20816, giới thiệu PHM và AI.",
         "Chẩn đoán hư hỏng bánh răng, ổ lăn (GMF, BPFO/BPFI/BSF/FTF, phổ đường bao) và máy nghiền đứng (VRM).",
@@ -218,7 +216,7 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
       tagline: "旋转设备智能振动监测与基于 AI 的预测性维护",
       description:
         "ITD 实验室与 VICEM 水泥技术研究院合作，为来自 7 家 VICEM 成员单位的 18 名工程师举办了为期 5 天的专题培训（编号 VCN.VC.2026.13），内容从振动理论延伸到用于诊断和预测性维护的 AI 方法。",
-      role: "讲师，负责讲授全部 5 天课程，包括理论与实践部分。",
+      role: "讲师",
       highlights: [
         "振动监测基础、维护策略、ISO 20816 标准，以及 PHM 与 AI 入门。",
         "齿轮与滚动轴承故障诊断（GMF、BPFO/BPFI/BSF/FTF、包络谱）以及立磨（VRM）诊断。",
