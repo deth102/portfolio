@@ -47,7 +47,7 @@
     "web": "Phát triển Web",
     "webList": "HTML, CSS, JavaScript, TypeScript, React, Next.js, Tailwind, GSAP, next-intl",
     "tools": "Phần mềm & Công cụ",
-    "toolsList": "Autocad, Solidworks, VS Code, Office",
+    "toolsList": "Autocad, Solidworks, Inventor, Mathematica, VS Code, Office",
     "research": "Lĩnh vực nghiên cứu",
     "researchList": "Xử lý tín hiệu cho phát hiện lỗi, Phân tích rung động, PHM, Dự báo RUL, Explainable AI, Transfer Learning"
   },
@@ -62,14 +62,13 @@
   },
   "Research": {
     "title": "Nghiên cứu",
-    "problemLabel": "Tóm tắt",
-    "approachLabel": "Điểm chính",
     "learnMore": "Đọc bài báo"
   },
   "Work": {
     "title": "Dự án ngoài nghiên cứu",
     "roleLabel": "Vai trò",
     "stackLabel": "Stack",
+    "scrollHint": "Kéo ngang",
     "highlightsLabel": "Điểm nổi bật",
     "learnMore": "Xem chi tiết"
   },

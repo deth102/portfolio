@@ -47,7 +47,7 @@
     "web": "Web Development",
     "webList": "HTML, CSS, JavaScript, TypeScript, React, Next.js, Tailwind, GSAP, next-intl",
     "tools": "Software & Tools",
-    "toolsList": "Autocad, Solidworks, VS Code, Office",
+    "toolsList": "Autocad, Solidworks, Inventor, Mathematica, VS Code, Office",
     "research": "Research Fields",
     "researchList": "Signal Processing for Fault Detection, Vibration Analysis, PHM, RUL Prediction, Explainable AI, Transfer Learning"
   },
@@ -62,14 +62,13 @@
   },
   "Research": {
     "title": "Research",
-    "problemLabel": "Summary",
-    "approachLabel": "Key findings",
     "learnMore": "Read the paper"
   },
   "Work": {
     "title": "Work",
     "roleLabel": "My Role",
     "stackLabel": "Stack",
+    "scrollHint": "Scroll",
     "highlightsLabel": "Highlights",
     "learnMore": "Learn more"
   },

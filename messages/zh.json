@@ -47,7 +47,7 @@
     "web": "Web 开发",
     "webList": "HTML、CSS、JavaScript、TypeScript、React、Next.js、Tailwind、GSAP、next-intl",
     "tools": "软件 & 工具",
-    "toolsList": "Autocad、Solidworks、VS Code、Office",
+    "toolsList": "Autocad、Solidworks、Inventor、Mathematica、VS Code、Office",
     "research": "研究领域",
     "researchList": "故障检测信号处理、振动分析、PHM、剩余寿命预测、可解释 AI、迁移学习"
   },
@@ -62,14 +62,13 @@
   },
   "Research": {
     "title": "研究",
-    "problemLabel": "摘要",
-    "approachLabel": "主要内容",
     "learnMore": "阅读论文"
   },
   "Work": {
     "title": "工作项目",
     "roleLabel": "我的角色",
     "stackLabel": "技术栈",
+    "scrollHint": "左右滑动",
     "highlightsLabel": "亮点",
     "learnMore": "了解更多"
   },
