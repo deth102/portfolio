@@ -129,6 +129,7 @@ export function homeStructuredData(locale: Locale) {
     email: `mailto:${person.email}`,
     jobTitle: person.jobTitle,
     description: seoText[locale].homeDescription,
+    disambiguatingDescription: person.disambiguatingDescription,
     worksFor: {
       ...organization(organizations.itdLab),
       parentOrganization: university(organizations.hust),

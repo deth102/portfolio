@@ -22,6 +22,10 @@ export const person = {
     "阮孟强",
   ],
   jobTitle: "AI Engineer & PHM Researcher",
+  // Tells search engines and AI this is not another person with the same name
+  // (e.g. a HUST faculty member). Describe only this person, never others.
+  disambiguatingDescription:
+    "AI engineer and PHM researcher; Master's student in Mechanical Engineering at National Central University, Taiwan; Mechatronics graduate of Hanoi University of Science and Technology (2026).",
   email: "cuongnm003@gmail.com",
   image: { path: "/me.jpg", width: 787, height: 1102 },
   orcidId: "0009-0008-3573-1221",
