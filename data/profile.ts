@@ -46,6 +46,7 @@ export const professionalProfiles = {
   googleScholar: "https://scholar.google.com/citations?user=6d8KpFQAAAAJ",
   researchGate: "https://www.researchgate.net/profile/Cuong-Nguyen-343",
   orcid: `https://orcid.org/${person.orcidId}`,
+  wikidata: "https://www.wikidata.org/wiki/Q142066290",
 };
 
 // Personal accounts — shown on the site, deliberately kept out of `sameAs`.
