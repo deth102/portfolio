@@ -64,6 +64,11 @@ export const organizations = {
     name: "ITD Lab",
     url: "https://itdhust.com",
   },
+  ptl: {
+    name: "Precision Transmission Lab",
+    alternateName: "PTL",
+    url: "https://sites.google.com/view/me-ncu-edu-tw-ptl/home",
+  },
   ncu: {
     name: "National Central University",
     alternateName: "NCU",

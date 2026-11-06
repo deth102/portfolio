@@ -42,14 +42,19 @@ export function homeStructuredData(locale: Locale) {
     email: `mailto:${person.email}`,
     jobTitle: person.jobTitle,
     description: seoText[locale].homeDescription,
-    worksFor: [
+    worksFor: {
+      ...organization(organizations.itdLab),
+      parentOrganization: university(organizations.hust),
+    },
+    memberOf: {
+      ...organization(organizations.ptl),
+      parentOrganization: university(organizations.ncu),
+    },
+    // NSRRC is a research collaboration, not employment.
+    affiliation: [
+      university(organizations.ncu),
       organization(organizations.nsrrc),
-      {
-        ...organization(organizations.itdLab),
-        parentOrganization: university(organizations.hust),
-      },
     ],
-    affiliation: university(organizations.ncu),
     alumniOf: university(organizations.hust),
     knowsAbout: person.knowsAbout,
     identifier: {
