@@ -1,8 +1,12 @@
 import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { works } from "@/data/work";
 import { routing } from "@/i18n/routing";
+import { workPath } from "@/lib/seo";
 
+// Work and events as a grid of cards: photograph, date, name and a short muted
+// note. Each card opens the item's own page with the full details.
 export default async function Work() {
   const t = await getTranslations("Work");
   const locale = (await getLocale()) as (typeof routing.locales)[number];
@@ -11,119 +15,50 @@ export default async function Work() {
   if (list.length === 0) return null;
 
   return (
-    <section className="mx-auto max-w-6xl px-6 py-12 md:py-16">
-      <div className="flex items-end justify-between gap-4">
-        <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-          {t("title")}
-        </h2>
-        <span aria-hidden className="text-sm text-muted">
-          {t("scrollHint")} →
-        </span>
-      </div>
+    <section id="work" className="section">
+      <div className="wrap">
+        <h2 className="t-h2">{t("title")}</h2>
 
-      <div
-        tabIndex={0}
-        aria-label={t("title")}
-        className="-mx-6 mt-8 flex snap-x snap-mandatory scroll-px-6 gap-6 overflow-x-auto px-6 pb-4 pt-2 focus-visible:outline-2 focus-visible:outline-brand"
-      >
-        {list.map((w) => (
-          <article
-            key={w.name}
-            className="flex w-[85%] shrink-0 snap-start flex-col overflow-hidden rounded-2xl border border-border/60 bg-card/40 transition-all duration-300 hover:-translate-y-1 hover:border-brand/50 hover:bg-card/70 sm:w-[70%] lg:w-[calc(50%-0.75rem)]"
-          >
-            {w.image && (
-              <div className="relative aspect-[4/3] w-full border-b border-border/60">
-                <Image
-                  src={w.image.src}
-                  alt={w.image.alt}
-                  fill
-                  sizes="(max-width: 640px) 85vw, (max-width: 1024px) 70vw, 560px"
-                  className="object-cover"
-                />
-              </div>
-            )}
+        <ul className="head-gap grid gap-[var(--card-gap)] sm:grid-cols-2 xl:grid-cols-4">
+          {list.map((w) => (
+            <li key={w.slug}>
+              <Link
+                href={workPath(w.slug)}
+                className="card card--link group flex h-full flex-col overflow-hidden"
+              >
+                <span className="m-zoom relative block aspect-[4/3] border-b border-border bg-background">
+                  {w.image ? (
+                    <Image
+                      src={w.image.src}
+                      alt={w.image.alt}
+                      fill
+                      sizes="(min-width: 1280px) 302px, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover"
+                    />
+                  ) : (
+                    // No photograph yet: a quiet tile, not the name a second time.
+                    <span aria-hidden className="absolute inset-0 grid place-items-center text-muted/60">
+                      <svg viewBox="0 0 24 24" className="h-10 w-10" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m12 3 9 5-9 5-9-5 9-5Z" />
+                        <path d="m3 13 9 5 9-5" />
+                      </svg>
+                    </span>
+                  )}
+                </span>
 
-            <div className="flex flex-1 flex-col p-6 md:p-8">
-              <header>
-                <h3 className="text-2xl font-semibold tracking-tight">
-                  {w.name}
-                </h3>
-                <p className="mt-1 text-brand">{w.tagline}</p>
-                {w.period && (
-                  <p className="mt-1 text-sm text-muted">{w.period}</p>
-                )}
-              </header>
-
-              <p className="mt-5 text-foreground/80 leading-relaxed">
-                {w.description}
-              </p>
-
-              {w.role && (
-                <>
-                  <h4 className="mt-6 text-xs font-semibold uppercase tracking-wider text-muted">
-                    {t("roleLabel")}
-                  </h4>
-                  <p className="mt-2 text-foreground/80 leading-relaxed">
-                    {w.role}
-                  </p>
-                </>
-              )}
-
-              {w.highlights && w.highlights.length > 0 && (
-                <>
-                  <h4 className="mt-6 text-xs font-semibold uppercase tracking-wider text-muted">
-                    {t("highlightsLabel")}
-                  </h4>
-                  <ul className="mt-2 list-disc pl-5 space-y-1 text-foreground/80">
-                    {w.highlights.map((h, i) => (
-                      <li key={i}>{h}</li>
-                    ))}
-                  </ul>
-                </>
-              )}
-
-              {w.stack && w.stack.length > 0 && (
-                <>
-                  <h4 className="mt-6 text-xs font-semibold uppercase tracking-wider text-muted">
-                    {t("stackLabel")}
-                  </h4>
-                  <ul className="mt-2 flex flex-wrap gap-1.5">
-                    {w.stack.map((s) => (
-                      <li
-                        key={s}
-                        className="inline-block rounded-full border border-border/60 px-2.5 py-0.5 text-xs text-foreground/80"
-                      >
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
-
-              {w.url && (
-                <a
-                  href={w.url}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-medium text-brand hover:underline underline-offset-4"
-                >
-                  {t("learnMore")}
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-3.5 w-3.5"
-                  >
-                    <path d="M7 17 17 7M8 7h9v9" />
-                  </svg>
-                </a>
-              )}
-            </div>
-          </article>
-        ))}
+                <span className="flex flex-1 flex-col p-5">
+                  <span className="t-label block">{w.period ?? " "}</span>
+                  <span className="t-card mt-2 block transition-colors group-hover:text-brand">
+                    {w.name}
+                  </span>
+                  <span className="t-small mt-2 block text-muted line-clamp-3">
+                    {w.tagline}
+                  </span>
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

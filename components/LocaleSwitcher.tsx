@@ -31,7 +31,7 @@ export default function LocaleSwitcher() {
         value={locale}
         onChange={(e) => onChange(e.target.value)}
         disabled={isPending}
-        className="appearance-none rounded-full border border-border/60 bg-transparent py-1.5 pl-3 pr-8 text-sm text-foreground/80 hover:text-brand hover:border-brand/60 transition-colors focus:outline-none focus:ring-2 focus:ring-brand/40 cursor-pointer"
+        className="h-[var(--btn-h-sm)] cursor-pointer appearance-none rounded-[var(--r-btn)] border border-line-strong bg-transparent pl-3 pr-8 text-[15px] font-medium text-foreground transition-colors hover:bg-foreground/5 disabled:cursor-wait"
         aria-label={t("label")}
       >
         {routing.locales.map((loc) => (
@@ -47,7 +47,7 @@ export default function LocaleSwitcher() {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="pointer-events-none absolute right-2 h-4 w-4 text-foreground/60"
+        className="pointer-events-none absolute right-2.5 h-4 w-4 text-muted"
       >
         <path d="m6 9 6 6 6-6" />
       </svg>

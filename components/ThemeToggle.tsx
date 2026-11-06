@@ -21,7 +21,7 @@ const getSnapshot = (): Theme =>
 // No theme on the server: render the light-mode icon until hydration.
 const getServerSnapshot = (): Theme => "light";
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ label }: { label: string }) {
   const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const toggle = () => {
@@ -34,8 +34,9 @@ export default function ThemeToggle() {
     <button
       type="button"
       onClick={toggle}
-      aria-label="Toggle theme"
-      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/60 text-foreground/80 hover:text-brand hover:border-brand/60 transition-colors"
+      aria-label={label}
+      title={label}
+      className="btn btn--secondary btn--sm w-10 px-0"
     >
       {theme === "dark" ? <SunIcon /> : <MoonIcon />}
     </button>

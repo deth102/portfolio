@@ -7,8 +7,9 @@ import {
   siteUrl,
 } from "@/data/profile";
 import { researches, selfAuthor, type Research } from "@/data/research";
+import type { Work } from "@/data/work";
 import { doiUrl } from "@/lib/citation";
-import { absoluteUrl, localePath, researchPath } from "@/lib/seo";
+import { absoluteUrl, localePath, researchPath, workPath } from "@/lib/seo";
 
 const personId = `${siteUrl}/#person`;
 const websiteId = `${siteUrl}/#website`;
@@ -99,6 +100,56 @@ export function researchStructuredData(r: Research, locale: Locale) {
             item: homeUrl,
           },
           { "@type": "ListItem", position: 2, name: r.title, item: pageUrl },
+        ],
+      },
+      {
+        "@type": "Person",
+        "@id": personId,
+        name: person.name,
+        url: siteUrl,
+      },
+    ],
+  };
+}
+
+// Schema.org graph for a work or event page: the page, its photograph, and a
+// breadcrumb back to the home page.
+export function workStructuredData(w: Work, locale: Locale) {
+  const pageUrl = absoluteUrl(localePath(locale, workPath(w.slug)));
+  const homeUrl = absoluteUrl(localePath(locale, "/"));
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: w.name,
+        description: w.description,
+        inLanguage: locale,
+        isPartOf: { "@id": websiteId },
+        author: { "@id": personId },
+        ...(w.image && {
+          primaryImageOfPage: {
+            "@type": "ImageOfPage",
+            url: absoluteUrl(w.image.src),
+            caption: w.image.alt,
+          },
+        }),
+        breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${pageUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: seoText[locale].siteName,
+            item: homeUrl,
+          },
+          { "@type": "ListItem", position: 2, name: w.name, item: pageUrl },
         ],
       },
       {

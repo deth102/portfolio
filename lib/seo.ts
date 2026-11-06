@@ -3,15 +3,20 @@ import { routing, type Locale } from "@/i18n/routing";
 import { person, seoText, siteUrl } from "@/data/profile";
 
 // Fixed pages that exist under every locale. Add new routes here so they get
-// hreflang alternates and a sitemap entry. Paper pages are added from
-// data/research.ts in app/sitemap.ts.
+// hreflang alternates and a sitemap entry. Paper and work pages are added from
+// data/research.ts and data/work.ts in app/sitemap.ts.
 export const staticPaths = ["/", "/about"] as const;
 export type SitePath =
   | (typeof staticPaths)[number]
-  | `/research/${string}`;
+  | `/research/${string}`
+  | `/work/${string}`;
 
 export function researchPath(slug: string): SitePath {
   return `/research/${slug}`;
+}
+
+export function workPath(slug: string): SitePath {
+  return `/work/${slug}`;
 }
 
 // Mirrors `localePrefix: "as-needed"`: the default locale has no prefix.
@@ -55,6 +60,8 @@ type PageInfo = {
   description: string;
   // Set for paper pages: Open Graph type becomes "article".
   article?: { publishedTime: string; authors: string[] };
+  // Replaces the portrait as the share image (work pages with a photograph).
+  image?: { url: string; alt: string };
 };
 
 // Full per-page metadata. Next merges metadata shallowly, so each page returns
@@ -79,7 +86,7 @@ export function pageMetadata(
       .filter((l) => l !== locale)
       .map((l) => seoText[l].ogLocale),
     images: [
-      {
+      page?.image ?? {
         url: person.image.path,
         width: person.image.width,
         height: person.image.height,
@@ -106,10 +113,10 @@ export function pageMetadata(
           lastName: person.familyName,
         },
     twitter: {
-      card: "summary",
+      card: page?.image ? "summary_large_image" : "summary",
       title,
       description,
-      images: [person.image.path],
+      images: [page?.image?.url ?? person.image.path],
     },
   };
 }

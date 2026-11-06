@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Libre_Franklin, Source_Serif_4 } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import "../globals.css";
 import Navbar from "@/components/Navbar";
+import SiteFooter from "@/components/SiteFooter";
 import { routing } from "@/i18n/routing";
 import {
   googleSiteVerification,
@@ -13,14 +14,19 @@ import {
   siteUrl,
 } from "@/data/profile";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+// The dealt pairing (tasteskill start.mjs, type "source-serif"): a serif for
+// headings, a sans for text. Both carry the Vietnamese subset.
+const serif = Source_Serif_4({
+  variable: "--font-serif-src",
+  subsets: ["latin", "latin-ext", "vietnamese"],
+  axes: ["opsz"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const sans = Libre_Franklin({
+  variable: "--font-sans-src",
+  subsets: ["latin", "latin-ext", "vietnamese"],
+  display: "swap",
 });
 
 // Site-wide defaults. Each page sets its own title, canonical, hreflang and
@@ -76,15 +82,17 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      data-radius="soft"
+      className={`${serif.variable} ${sans.variable} h-full antialiased`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+      <body className="flex min-h-full flex-col bg-background text-foreground">
         <NextIntlClientProvider>
           <Navbar />
           <main className="flex-1">{children}</main>
+          <SiteFooter />
         </NextIntlClientProvider>
       </body>
     </html>

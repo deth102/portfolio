@@ -2,14 +2,22 @@
   "Nav": {
     "brand": "cuong.nm",
     "home": "首页",
-    "about": "联系"
+    "about": "联系",
+    "background": "背景",
+    "publications": "论文",
+    "experience": "经历",
+    "work": "工作",
+    "projects": "个人项目",
+    "contact": "发送消息",
+    "menu": "菜单",
+    "close": "关闭菜单",
+    "theme": "切换浅色和深色主题"
   },
   "Home": {
-    "greeting": "你好，我是",
+    "notice": "台湾国立中央大学 (NCU) 硕士研究生",
     "name": "阮孟强 (Henry)",
-    "tagline": "AI 工程师 · 基于振动信号的故障诊断与边缘 AI",
-    "bio": "我的研究专注于将人工智能应用于工业设备的状态监测与故障诊断，尤其是旋转机械。通过结合信号分析、频谱以及轴承、轴和齿轮等部件的故障特征，我致力于构建准确且高度自动化的智能诊断系统。",
-    "photoPlaceholder": "你的照片"
+    "lead": "AI 工程师与 PHM 研究员，专注于基于振动信号的旋转机械故障诊断，从信号处理到可在边缘设备上运行的轻量化模型。",
+    "readPublications": "查看发表论文"
   },
   "About": {
     "eyebrow": "保持联系",
@@ -34,30 +42,71 @@
     "facebookLabel": "Facebook"
   },
   "Education": {
+    "sectionTitle": "背景",
     "title": "教育背景",
     "items": {
-      "master": {"degree": "机械工程硕士", "school": "国立中央大学", "location": "台湾", "period": "2026年至今"},
-      "bachelor": {"degree": "机电一体化工程学士", "school": "河内理工大学", "location": "越南河内", "period": "2021年至2026年", "note": "良好等级毕业 · 英语 B2"}
-    }
+      "master": {
+        "degree": "机械工程硕士",
+        "school": "国立中央大学",
+        "location": "台湾",
+        "period": "2026年至今"
+      },
+      "bachelor": {
+        "degree": "机电一体化工程学士",
+        "school": "河内理工大学",
+        "location": "越南河内",
+        "period": "2021年至2026年",
+        "note": "良好等级毕业"
+      }
+    },
+    "languageTitle": "语言",
+    "languages": [
+      {
+        "name": "英语",
+        "level": "IELTS 6.0"
+      }
+    ]
   },
   "Skills": {
     "title": "技能",
     "languages": "编程语言",
     "languagesList": "Python、C/C++、Matlab & Simulink",
-    "web": "Web 开发",
-    "webList": "HTML、CSS、JavaScript、TypeScript、React、Next.js、Tailwind、GSAP、next-intl",
-    "tools": "软件 & 工具",
+    "tools": "软件与工具",
     "toolsList": "Autocad、Solidworks、Inventor、Mathematica、VS Code、Office",
     "research": "研究领域",
-    "researchList": "故障检测信号处理、振动分析、PHM、剩余寿命预测、可解释 AI、迁移学习"
+    "researchFields": [
+      "故障检测信号处理",
+      "振动分析",
+      "故障预测与健康管理（PHM）",
+      "剩余寿命预测",
+      "可解释 AI",
+      "迁移学习",
+      "边缘 AI"
+    ]
   },
   "Experience": {
     "title": "工作经历",
     "items": {
-      "researcher": {"role": "合作研究员", "company": "国家同步辐射研究中心（NSRRC）", "period": "自2026年10月起"},
-      "teachingAssistant": {"role": "助教", "company": "精密传动实验室", "period": "自2026年9月起"},
-      "backendDeveloper": {"role": "后端开发工程师", "company": "Aladin", "period": "2026年"},
-      "phmResearcher": {"role": "PHM 研究员", "company": "ITD 实验室 — 河内理工大学", "period": "2025年至今"}
+      "researcher": {
+        "role": "合作研究员",
+        "company": "国家同步辐射研究中心（NSRRC）",
+        "period": "自2026年10月起"
+      },
+      "teachingAssistant": {
+        "role": "助教",
+        "company": "精密传动实验室",
+        "period": "自2026年9月起"
+      },
+      "backendDeveloper": {
+        "role": "后端开发工程师",
+        "company": "Aladin",
+        "period": "2026年"
+      },
+      "phmResearcher": {
+        "role": "PHM 研究员",
+        "company": "ITD 实验室 — 河内理工大学",
+        "period": "2025年至今"
+      }
     }
   },
   "Research": {
@@ -78,16 +127,25 @@
     "copied": "已复制"
   },
   "Work": {
-    "title": "工作项目",
+    "title": "工作与活动",
     "roleLabel": "我的角色",
     "stackLabel": "技术栈",
-    "scrollHint": "左右滑动",
     "highlightsLabel": "亮点",
-    "learnMore": "了解更多"
+    "learnMore": "查看页面",
+    "back": "全部工作与活动"
   },
   "Projects": {
     "title": "个人项目",
     "viewOnGithub": "在 GitHub 上查看"
+  },
+  "Footer": {
+    "title": "科研交流与合作联系",
+    "line": "欢迎就我的论文、项目或教学提出任何问题。",
+    "emailMe": "发送邮件",
+    "pages": "页面",
+    "profiles": "学术档案",
+    "social": "社交媒体",
+    "rights": "阮孟强 (Nguyen Manh Cuong)"
   },
   "LocaleSwitcher": {
     "label": "语言",

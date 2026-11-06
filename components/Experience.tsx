@@ -1,55 +1,45 @@
-import {getTranslations} from "next-intl/server";
-import {experiences} from "@/data/experience";
+import { getTranslations } from "next-intl/server";
+import { experiences } from "@/data/experience";
 
+// One row per position: role and period on the left, the organisation on the right.
 export default async function Experience() {
   const t = await getTranslations("Experience");
 
   return (
-    <section className="mx-auto max-w-6xl px-6 py-12 md:py-16">
-      <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-        {t("title")}
-      </h2>
+    <section id="experience" className="section">
+      <div className="wrap">
+        <h2 className="t-h2">{t("title")}</h2>
 
-      <ol className="mt-10 relative border-l-2 border-border/60 ml-3 space-y-10">
-        {experiences.map((exp) => (
-          <li key={exp.id} className="pl-8 relative">
-            <span
-              aria-hidden
-              className="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-foreground border-4 border-background"
-            />
-            <h3 className="text-xl font-semibold">
-              {t(`items.${exp.id}.role`)}
-            </h3>
-            <p className="mt-1 text-sm text-muted">
-              {exp.companyUrl ? (
-                <a
-                  href={exp.companyUrl}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="inline-flex items-center gap-1 text-foreground hover:text-brand underline-offset-4 hover:underline transition-colors"
-                >
-                  {t(`items.${exp.id}.company`)}
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-3 w-3"
-                    aria-hidden
+        <ol className="rows head-gap">
+          {experiences.map((exp) => (
+            <li
+              key={exp.id}
+              className="grid gap-y-1 py-6 lg:grid-cols-12 lg:gap-x-6"
+            >
+              <div className="lg:col-span-5">
+                <p className="t-card">{t(`items.${exp.id}.role`)}</p>
+                <p className="t-small mt-1 text-muted">
+                  {t(`items.${exp.id}.period`)}
+                </p>
+              </div>
+              <p className="lg:col-span-6 lg:col-start-7 lg:pt-0.5">
+                {exp.companyUrl ? (
+                  <a
+                    href={exp.companyUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="link"
                   >
-                    <path d="M7 17 17 7M8 7h9v9" />
-                  </svg>
-                </a>
-              ) : (
-                <span>{t(`items.${exp.id}.company`)}</span>
-              )}{" "}
-              • {t(`items.${exp.id}.period`)}
-            </p>
-          </li>
-        ))}
-      </ol>
+                    {t(`items.${exp.id}.company`)}
+                  </a>
+                ) : (
+                  t(`items.${exp.id}.company`)
+                )}
+              </p>
+            </li>
+          ))}
+        </ol>
+      </div>
     </section>
   );
 }

@@ -104,20 +104,13 @@ export default async function AboutPage({
   const t = await getTranslations("About");
 
   return (
-    <section className="relative mx-auto max-w-6xl overflow-hidden px-6 py-20 md:py-28">
-      <div aria-hidden className="pointer-events-none absolute -right-36 top-20 h-96 w-96 rounded-full bg-brand/10 blur-3xl" />
-      <div aria-hidden className="pointer-events-none absolute -left-40 bottom-0 h-80 w-80 rounded-full bg-brand/5 blur-3xl" />
+    <section className="page-top">
+      <div className="wrap">
+        <h1 className="t-h1">{t("title")}</h1>
+        <p className="t-lead measure mt-6">{t("formDescription")}</p>
 
-      <div className="relative max-w-2xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-brand">
-          {t("eyebrow")}
-        </p>
-        <h1 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">
-          {t("title")}
-        </h1>
-      </div>
-
-      <div className="relative mt-12 grid items-start gap-8 lg:grid-cols-[1.08fr_0.92fr]">
+      <div className="head-gap grid items-start gap-y-12 lg:grid-cols-12 lg:gap-x-6">
+        <div className="lg:col-span-6">
         <QuickMessageForm
           labels={{
             title: t("formTitle"),
@@ -135,44 +128,38 @@ export default async function AboutPage({
             error: t("messageError"),
           }}
         />
+        </div>
 
-        <aside className="rounded-[2rem] border border-border/70 bg-background/50 p-6 backdrop-blur-sm md:p-8">
-          <div className="flex items-center gap-3">
-            <div className="h-px w-8 bg-brand" />
-            <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-muted">
-              {t("detailsTitle")}
-            </h2>
-          </div>
-
-          <div className="mt-6 space-y-3">
+        <aside className="lg:col-span-5 lg:col-start-8">
+          <h2 className="t-label mb-4">{t("detailsTitle")}</h2>
+          <ul className="rows">
             {contacts.map((contact) => (
-              <a
-                key={contact.labelKey}
-                href={contact.href}
-                target={contact.href.startsWith("http") ? "_blank" : undefined}
-                rel={
-                  contact.href.startsWith("http")
-                    ? `${professionalLinks.has(contact.href) ? "me " : ""}noreferrer noopener`
-                    : undefined
-                }
-                className="group flex items-center gap-4 rounded-2xl border border-transparent p-3 transition hover:border-border/80 hover:bg-card/70"
-              >
-                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand/12 text-brand transition group-hover:bg-brand group-hover:text-slate-950">
-                  <ContactIcon type={contact.icon} />
-                </span>
-                <span className="min-w-0">
-                  <span className="block text-xs font-semibold uppercase tracking-wider text-muted">
-                    {t(contact.labelKey)}
+              <li key={contact.labelKey}>
+                <a
+                  href={contact.href}
+                  target={contact.href.startsWith("http") ? "_blank" : undefined}
+                  rel={
+                    contact.href.startsWith("http")
+                      ? `${professionalLinks.has(contact.href) ? "me " : ""}noreferrer noopener`
+                      : undefined
+                  }
+                  className="group flex items-center gap-4 py-4"
+                >
+                  <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-[var(--r-sm)] border border-border text-muted transition-colors group-hover:text-foreground">
+                    <ContactIcon type={contact.icon} />
                   </span>
-                  <span className="mt-1 block truncate font-medium group-hover:text-brand">
-                    {contact.value}
+                  <span className="min-w-0">
+                    <span className="t-label block">{t(contact.labelKey)}</span>
+                    <span className="mt-0.5 block truncate transition-colors group-hover:text-brand">
+                      {contact.value}
+                    </span>
                   </span>
-                </span>
-              </a>
+                </a>
+              </li>
             ))}
-          </div>
-
+          </ul>
         </aside>
+      </div>
       </div>
     </section>
   );

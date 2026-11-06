@@ -2,14 +2,22 @@
   "Nav": {
     "brand": "cuong.nm",
     "home": "Trang chủ",
-    "about": "Liên hệ"
+    "about": "Liên hệ",
+    "background": "Nền tảng",
+    "publications": "Công bố",
+    "experience": "Kinh nghiệm",
+    "work": "Công việc",
+    "projects": "Dự án cá nhân",
+    "contact": "Gửi tin nhắn",
+    "menu": "Menu",
+    "close": "Đóng menu",
+    "theme": "Chuyển giao diện sáng và tối"
   },
   "Home": {
-    "greeting": "Xin chào, tôi là",
+    "notice": "Học viên thạc sĩ, Đại học Quốc lập Trung ương (NCU), Đài Loan",
     "name": "Nguyễn Mạnh Cường",
-    "tagline": "Kỹ sư AI · Chẩn đoán lỗi các thiết bị cơ khí từ đa tín hiệu",
-    "bio": "Tôi tập trung nghiên cứu ứng dụng AI trong chẩn đoán tình trạng và phát hiện hư hỏng của thiết bị công nghiệp, đặc biệt là máy quay. Bằng cách kết hợp phân tích tín hiệu, phổ tần số và các đặc trưng hư hỏng của ổ bi, trục, bánh răng, tôi hướng đến xây dựng những hệ thống chẩn đoán thông minh, chính xác và có khả năng tự động hóa cao.",
-    "photoPlaceholder": "Ảnh của bạn"
+    "lead": "Kỹ sư AI và nghiên cứu viên PHM, nghiên cứu chẩn đoán hư hỏng máy quay dựa trên tín hiệu rung động, từ xử lý tín hiệu đến các mô hình gọn nhẹ chạy trên thiết bị biên.",
+    "readPublications": "Xem công bố khoa học"
   },
   "About": {
     "eyebrow": "Kết nối",
@@ -34,30 +42,71 @@
     "facebookLabel": "Facebook"
   },
   "Education": {
+    "sectionTitle": "Nền tảng",
     "title": "Học vấn",
     "items": {
-      "master": {"degree": "Thạc sĩ Kỹ thuật Cơ khí", "school": "Đại học Quốc lập Trung ương", "location": "Đài Loan", "period": "2026 - nay"},
-      "bachelor": {"degree": "Kỹ sư Cơ điện tử", "school": "Đại học Bách khoa Hà Nội", "location": "Hà Nội, Việt Nam", "period": "2021 - 2026", "note": "Tiếng Anh B2"}
-    }
+      "master": {
+        "degree": "Thạc sĩ Kỹ thuật Cơ khí",
+        "school": "Đại học Quốc lập Trung ương",
+        "location": "Đài Loan",
+        "period": "2026 - nay"
+      },
+      "bachelor": {
+        "degree": "Cử nhân Cơ điện tử",
+        "school": "Đại học Bách khoa Hà Nội",
+        "location": "Hà Nội, Việt Nam",
+        "period": "2021 - 2026",
+        "note": ""
+      }
+    },
+    "languageTitle": "Ngoại ngữ",
+    "languages": [
+      {
+        "name": "Tiếng Anh",
+        "level": "IELTS 6.0"
+      }
+    ]
   },
   "Skills": {
     "title": "Kỹ năng",
     "languages": "Ngôn ngữ lập trình",
     "languagesList": "Python, C/C++, Matlab & Simulink",
-    "web": "Phát triển Web",
-    "webList": "HTML, CSS, JavaScript, TypeScript, React, Next.js, Tailwind, GSAP, next-intl",
-    "tools": "Phần mềm & Công cụ",
+    "tools": "Phần mềm và công cụ",
     "toolsList": "Autocad, Solidworks, Inventor, Mathematica, VS Code, Office",
     "research": "Lĩnh vực nghiên cứu",
-    "researchList": "Xử lý tín hiệu cho phát hiện lỗi, Phân tích rung động, PHM, Dự báo RUL, Explainable AI, Transfer Learning"
+    "researchFields": [
+      "Xử lý tín hiệu cho phát hiện lỗi",
+      "Phân tích rung động",
+      "Dự báo và quản lý sức khỏe thiết bị (PHM)",
+      "Dự báo RUL",
+      "Explainable AI",
+      "Transfer Learning",
+      "Edge AI"
+    ]
   },
   "Experience": {
     "title": "Kinh nghiệm",
     "items": {
-      "researcher": {"role": "Nghiên cứu viên cộng tác", "company": "Trung tâm Nghiên cứu Bức xạ Synchrotron Quốc gia (NSRRC)", "period": "từ tháng 10/2026"},
-      "teachingAssistant": {"role": "Trợ giảng", "company": "Phòng thí nghiệm Truyền động Chính xác", "period": "từ tháng 9/2026"},
-      "backendDeveloper": {"role": "Lập trình viên Backend", "company": "Aladin", "period": "năm 2026"},
-      "phmResearcher": {"role": "Nghiên cứu viên PHM", "company": "ITD Lab — Đại học Bách khoa Hà Nội", "period": "2025 - nay"}
+      "researcher": {
+        "role": "Nghiên cứu viên cộng tác",
+        "company": "Trung tâm Nghiên cứu Bức xạ Synchrotron Quốc gia (NSRRC)",
+        "period": "từ tháng 10/2026"
+      },
+      "teachingAssistant": {
+        "role": "Trợ giảng",
+        "company": "Phòng thí nghiệm Truyền động Chính xác",
+        "period": "từ tháng 9/2026"
+      },
+      "backendDeveloper": {
+        "role": "Lập trình viên Backend",
+        "company": "Aladin",
+        "period": "năm 2026"
+      },
+      "phmResearcher": {
+        "role": "Nghiên cứu viên PHM",
+        "company": "ITD Lab — Đại học Bách khoa Hà Nội",
+        "period": "2025 - nay"
+      }
     }
   },
   "Research": {
@@ -78,16 +127,25 @@
     "copied": "Đã sao chép"
   },
   "Work": {
-    "title": "Dự án",
+    "title": "Công việc và sự kiện",
     "roleLabel": "Vai trò",
     "stackLabel": "Stack",
-    "scrollHint": "Kéo ngang",
     "highlightsLabel": "Điểm nổi bật",
-    "learnMore": "Xem chi tiết"
+    "learnMore": "Xem trang",
+    "back": "Tất cả công việc và sự kiện"
   },
   "Projects": {
     "title": "Dự án cá nhân",
     "viewOnGithub": "Xem trên GitHub"
+  },
+  "Footer": {
+    "title": "Liên hệ trao đổi và hợp tác nghiên cứu",
+    "line": "Mọi câu hỏi về công bố, dự án hay hoạt động giảng dạy của tôi đều được hoan nghênh.",
+    "emailMe": "Gửi email",
+    "pages": "Trang",
+    "profiles": "Hồ sơ nghiên cứu",
+    "social": "Mạng xã hội",
+    "rights": "Nguyễn Mạnh Cường"
   },
   "LocaleSwitcher": {
     "label": "Ngôn ngữ",

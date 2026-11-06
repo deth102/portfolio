@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import { homeStructuredData } from "@/lib/structured-data";
 import JsonLd from "@/components/JsonLd";
-import HeroIntro from "@/components/HeroIntro";
-import Reveal from "@/components/Reveal";
-import Skills from "@/components/Skills";
-import Education from "@/components/Education";
+import Hero from "@/components/Hero";
+import Background from "@/components/Background";
 import Experience from "@/components/Experience";
 import Research from "@/components/Research";
 import Work from "@/components/Work";
@@ -29,36 +27,18 @@ export default async function Home({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("Home");
 
+  // Bio (with research fields), background, experience, publications, work and events,
+  // personal projects; the closing section is the site footer.
   return (
     <>
       <JsonLd data={homeStructuredData(locale as Locale)} />
-      <HeroIntro
-        greeting={t("greeting")}
-        name={t("name")}
-        tagline={t("tagline")}
-        bio={t("bio")}
-      />
-
-      <Reveal>
-        <Skills />
-      </Reveal>
-      <Reveal>
-        <Education />
-      </Reveal>
-      <Reveal>
-        <Experience />
-      </Reveal>
-      <Reveal>
-        <Research />
-      </Reveal>
-      <Reveal>
-        <Work />
-      </Reveal>
-      <Reveal>
-        <Projects />
-      </Reveal>
+      <Hero />
+      <Background />
+      <Experience />
+      <Research />
+      <Work />
+      <Projects />
     </>
   );
 }

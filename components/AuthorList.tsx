@@ -8,7 +8,7 @@ export default function AuthorList({ authors }: { authors: string[] }) {
         <span key={a}>
           {i > 0 && ", "}
           {a === selfAuthor ? (
-            <span className="font-semibold text-foreground">{a}</span>
+            <span className="font-medium text-foreground">{a}</span>
           ) : (
             a
           )}

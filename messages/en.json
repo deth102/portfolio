@@ -2,14 +2,22 @@
   "Nav": {
     "brand": "cuong.nm",
     "home": "Home",
-    "about": "About"
+    "about": "Contact",
+    "background": "Background",
+    "publications": "Publications",
+    "experience": "Experience",
+    "work": "Work",
+    "projects": "Projects",
+    "contact": "Send a message",
+    "menu": "Menu",
+    "close": "Close menu",
+    "theme": "Switch light and dark theme"
   },
   "Home": {
-    "greeting": "Hi, I'm",
+    "notice": "Master's student, National Central University, Taiwan",
     "name": "Cuong (Henry) Nguyen",
-    "tagline": "AI Engineer · Vibration-Based Fault Diagnosis & Edge AI",
-    "bio": "My research focuses on applying AI to condition monitoring and fault diagnosis for industrial equipment, particularly rotating machinery. By combining signal analysis, frequency spectra, and the fault signatures of bearings, shafts, and gears, I aim to build intelligent diagnostic systems that are accurate and highly automated.",
-    "photoPlaceholder": "Your photo"
+    "lead": "AI engineer and PHM researcher working on vibration-based fault diagnosis for rotating machinery, from signal processing to lightweight models that run on edge devices.",
+    "readPublications": "Read my publications"
   },
   "About": {
     "eyebrow": "Let's connect",
@@ -34,30 +42,71 @@
     "facebookLabel": "Facebook"
   },
   "Education": {
+    "sectionTitle": "Background",
     "title": "Education",
     "items": {
-      "master": {"degree": "Master of Mechanical Engineering", "school": "National Central University", "location": "Taiwan", "period": "2026 - present"},
-      "bachelor": {"degree": "Bachelor of Engineering, Mechatronics", "school": "Hanoi University of Science and Technology", "location": "Hanoi, Vietnam", "period": "2021 - 2026", "note": "Good Degree · English B2"}
-    }
+      "master": {
+        "degree": "Master of Mechanical Engineering",
+        "school": "National Central University",
+        "location": "Taiwan",
+        "period": "2026 - present"
+      },
+      "bachelor": {
+        "degree": "Bachelor of Engineering, Mechatronics",
+        "school": "Hanoi University of Science and Technology",
+        "location": "Hanoi, Vietnam",
+        "period": "2021 - 2026",
+        "note": "Good degree"
+      }
+    },
+    "languageTitle": "Language",
+    "languages": [
+      {
+        "name": "English",
+        "level": "IELTS 6.0"
+      }
+    ]
   },
   "Skills": {
     "title": "Skills",
-    "languages": "Programming Languages",
+    "languages": "Programming languages",
     "languagesList": "Python, C/C++, Matlab & Simulink",
-    "web": "Web Development",
-    "webList": "HTML, CSS, JavaScript, TypeScript, React, Next.js, Tailwind, GSAP, next-intl",
-    "tools": "Software & Tools",
+    "tools": "Software and tools",
     "toolsList": "Autocad, Solidworks, Inventor, Mathematica, VS Code, Office",
-    "research": "Research Fields",
-    "researchList": "Signal Processing for Fault Detection, Vibration Analysis, PHM, RUL Prediction, Explainable AI, Transfer Learning"
+    "research": "Research fields",
+    "researchFields": [
+      "Signal Processing for Fault Detection",
+      "Vibration Analysis",
+      "Prognostics and Health Management (PHM)",
+      "RUL Prediction",
+      "Explainable AI",
+      "Transfer Learning",
+      "Edge AI"
+    ]
   },
   "Experience": {
     "title": "Experience",
     "items": {
-      "researcher": {"role": "Collaborating Researcher", "company": "National Synchrotron Radiation Research Center (NSRRC)", "period": "from October 2026"},
-      "teachingAssistant": {"role": "Teaching Assistant", "company": "Precision Transmission Lab", "period": "from September 2026"},
-      "backendDeveloper": {"role": "Backend Developer", "company": "Aladin", "period": "in 2026"},
-      "phmResearcher": {"role": "PHM Researcher", "company": "ITD Lab — Hanoi University of Science and Technology", "period": "2025 - present"}
+      "researcher": {
+        "role": "Collaborating Researcher",
+        "company": "National Synchrotron Radiation Research Center (NSRRC)",
+        "period": "from October 2026"
+      },
+      "teachingAssistant": {
+        "role": "Teaching Assistant",
+        "company": "Precision Transmission Lab",
+        "period": "from September 2026"
+      },
+      "backendDeveloper": {
+        "role": "Backend Developer",
+        "company": "Aladin",
+        "period": "in 2026"
+      },
+      "phmResearcher": {
+        "role": "PHM Researcher",
+        "company": "ITD Lab — Hanoi University of Science and Technology",
+        "period": "2025 - present"
+      }
     }
   },
   "Research": {
@@ -78,16 +127,25 @@
     "copied": "Copied"
   },
   "Work": {
-    "title": "Work",
-    "roleLabel": "My Role",
+    "title": "Work and events",
+    "roleLabel": "My role",
     "stackLabel": "Stack",
-    "scrollHint": "Scroll",
     "highlightsLabel": "Highlights",
-    "learnMore": "Learn more"
+    "learnMore": "Visit the page",
+    "back": "All work and events"
   },
   "Projects": {
-    "title": "Personal Projects",
+    "title": "Personal projects",
     "viewOnGithub": "View on GitHub"
+  },
+  "Footer": {
+    "title": "Contact for research and collaboration",
+    "line": "Questions about my publications, projects or teaching are welcome.",
+    "emailMe": "Email me",
+    "pages": "Pages",
+    "profiles": "Research profiles",
+    "social": "Social",
+    "rights": "Nguyen Manh Cuong"
   },
   "LocaleSwitcher": {
     "label": "Language",

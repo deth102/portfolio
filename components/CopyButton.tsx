@@ -30,7 +30,7 @@ export default function CopyButton({
     <button
       type="button"
       onClick={copy}
-      className="rounded-full border border-border/70 px-3 py-1 text-xs font-medium text-foreground/80 transition-colors hover:border-brand/60 hover:text-brand"
+      className="btn btn--secondary btn--sm"
     >
       <span aria-live="polite">{copied ? labels.copied : labels.copy}</span>
     </button>

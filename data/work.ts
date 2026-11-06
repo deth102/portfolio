@@ -1,4 +1,6 @@
 export type Work = {
+  // URL of the detail page, /work/<slug>; the same in every language.
+  slug: string;
   name: string;
   tagline: string;
   description: string;
@@ -7,11 +9,13 @@ export type Work = {
   highlights?: string[];
   url?: string;
   period?: string;
+  // A 4:3 photograph; without one the card shows the name on a plain tile.
   image?: { src: string; alt: string };
 };
 
 const pt500Image = "/PT500.jpg";
 const vicemImage = "/vicemteaching.jpg";
+const itdSiteImage = "/itdhust-website.jpg";
 const vicemUrl = "https://itdhust.com/partnership";
 const vicemStack = ["Python", "Google Colab", "scikit-learn", "SHAP"];
 
@@ -21,6 +25,7 @@ const vicemStack = ["Python", "Google Colab", "scikit-learn", "SHAP"];
 export const works: Record<"en" | "vi" | "zh", Work[]> = {
   en: [
     {
+      slug: "pt500-vibration-test-rig",
       name: "PT500 Vibration Test Rig",
       tagline: "Hands-on vibration experiments on rotating machinery",
       description:
@@ -39,6 +44,7 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
       },
     },
     {
+      slug: "vicem-training",
       name: "Training at VICEM",
       tagline:
         "Intelligent vibration monitoring & AI-based predictive maintenance for rotating equipment",
@@ -60,6 +66,7 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
       },
     },
     {
+      slug: "itd-lab-website",
       name: "ITD Lab Website",
       tagline: "A bilingual home for ITD Lab",
       description:
@@ -81,9 +88,15 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
       ],
       url: "https://itdhust.com",
       period: "2026",
+      image: {
+        src: itdSiteImage,
+        alt: "The ITD Lab website home page",
+      },
     },
     {
+      slug: "aladata",
       name: "Aladata",
+      period: "2026",
       tagline: "Conversational Text-to-SQL (Vietnamese)",
       description:
         "A Vietnamese-language interface for asking business-data questions without writing SQL. The system parses the question, generates the query, runs it on ClickHouse, and returns the result. Three modes: single questions, follow-ups, and switching context between topics.",
@@ -108,6 +121,7 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
   ],
   vi: [
     {
+      slug: "pt500-vibration-test-rig",
       name: "Bộ thí nghiệm rung động PT500",
       tagline: "Thực nghiệm rung động trên máy quay",
       description:
@@ -126,6 +140,7 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
       },
     },
     {
+      slug: "vicem-training",
       name: "Đào tạo tại VICEM",
       tagline:
         "Giám sát rung động thông minh & bảo trì dự đoán dựa trên AI cho thiết bị quay",
@@ -147,6 +162,7 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
       },
     },
     {
+      slug: "itd-lab-website",
       name: "Website ITD Lab",
       tagline: "Nơi giới thiệu phòng thí nghiệm ITD",
       description:
@@ -168,9 +184,15 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
       ],
       url: "https://itdhust.com",
       period: "2026",
+      image: {
+        src: itdSiteImage,
+        alt: "Trang chủ website ITD Lab",
+      },
     },
     {
+      slug: "aladata",
       name: "Aladata",
+      period: "2026",
       tagline: "Conversational Text-to-SQL (tiếng Việt)",
       description:
         "Giao diện tiếng Việt để nhân viên hỏi dữ liệu doanh thu mà không cần viết SQL. Hệ thống parse câu hỏi, sinh SQL, chạy trên ClickHouse rồi trả về kết quả. Ba dạng tương tác: câu đơn, câu tiếp nối, và đổi ngữ cảnh giữa các chủ đề.",
@@ -195,6 +217,7 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
   ],
   zh: [
     {
+      slug: "pt500-vibration-test-rig",
       name: "PT500 振动试验台",
       tagline: "旋转机械振动实验",
       description:
@@ -212,6 +235,7 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
       },
     },
     {
+      slug: "vicem-training",
       name: "VICEM 培训",
       tagline: "旋转设备智能振动监测与基于 AI 的预测性维护",
       description:
@@ -232,6 +256,7 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
       },
     },
     {
+      slug: "itd-lab-website",
       name: "ITD Lab 网站",
       tagline: "ITD 实验室的双语主页",
       description:
@@ -252,9 +277,15 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
       ],
       url: "https://itdhust.com",
       period: "2026",
+      image: {
+        src: itdSiteImage,
+        alt: "ITD 实验室网站首页",
+      },
     },
     {
+      slug: "aladata",
       name: "Aladata",
+      period: "2026",
       tagline: "对话式 Text-to-SQL（越南语）",
       description:
         "越南语自然语言接口，员工不用写 SQL 也能查业务数据。系统解析问题、生成 SQL、在 ClickHouse 上执行、返回结果。三种模式：单个问题、追问、跨主题切换。",
@@ -278,3 +309,9 @@ export const works: Record<"en" | "vi" | "zh", Work[]> = {
     },
   ],
 };
+
+export const workSlugs = works.en.map((w) => w.slug);
+
+export function getWork(locale: keyof typeof works, slug: string) {
+  return works[locale].find((w) => w.slug === slug);
+}
