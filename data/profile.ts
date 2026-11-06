@@ -27,7 +27,10 @@ export const person = {
   disambiguatingDescription:
     "AI engineer and PHM researcher; Master's student in Mechanical Engineering at National Central University, Taiwan; Mechatronics graduate of Hanoi University of Science and Technology (2026).",
   email: "cuongnm003@gmail.com",
+  // Formal portrait: JSON-LD, Open Graph and search results.
   image: { path: "/me.jpg", width: 787, height: 1102 },
+  // The round photo on the home page (a square crop of /prf.jpg).
+  avatar: { path: "/prf-square.jpg", width: 800, height: 800 },
   orcidId: "0009-0008-3573-1221",
   knowsAbout: [
     "Vibration Analysis",

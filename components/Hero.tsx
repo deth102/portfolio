@@ -36,12 +36,12 @@ export default async function Hero() {
           <div className="order-first md:order-none md:col-span-5 md:col-start-8 md:justify-self-end">
             <div className="relative size-40 overflow-hidden rounded-full border border-border bg-card md:size-64 lg:size-80 xl:size-[400px]">
               <Image
-                src={person.image.path}
+                src={person.avatar.path}
                 alt={t("name")}
                 fill
                 priority
                 sizes="(min-width: 1280px) 400px, (min-width: 1024px) 320px, (min-width: 768px) 256px, 160px"
-                className="object-cover object-[50%_10%]"
+                className="object-cover"
               />
             </div>
           </div>
