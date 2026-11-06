@@ -61,11 +61,11 @@
     }
   },
   "Research": {
-    "title": "Nghiên cứu",
+    "title": "Công bố khoa học",
     "learnMore": "Đọc bài báo"
   },
   "Work": {
-    "title": "Dự án ngoài nghiên cứu",
+    "title": "Dự án",
     "roleLabel": "Vai trò",
     "stackLabel": "Stack",
     "scrollHint": "Kéo ngang",
