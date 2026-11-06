@@ -1,25 +1,31 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
 type Theme = "light" | "dark";
 
-export default function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>("light");
-  const [mounted, setMounted] = useState(false);
+// The theme lives on <html class="dark">, set before hydration by the inline
+// script in the layout. Read that class directly instead of mirroring it in state.
+function subscribe(onChange: () => void) {
+  const observer = new MutationObserver(onChange);
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+  return () => observer.disconnect();
+}
 
-  useEffect(() => {
-    const stored = (localStorage.getItem("theme") as Theme | null) ?? null;
-    const isDark =
-      stored === "dark" ||
-      (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches);
-    setTheme(isDark ? "dark" : "light");
-    setMounted(true);
-  }, []);
+const getSnapshot = (): Theme =>
+  document.documentElement.classList.contains("dark") ? "dark" : "light";
+
+// No theme on the server: render the light-mode icon until hydration.
+const getServerSnapshot = (): Theme => "light";
+
+export default function ThemeToggle() {
+  const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const toggle = () => {
     const next: Theme = theme === "dark" ? "light" : "dark";
-    setTheme(next);
     document.documentElement.classList.toggle("dark", next === "dark");
     localStorage.setItem("theme", next);
   };
@@ -31,7 +37,7 @@ export default function ThemeToggle() {
       aria-label="Toggle theme"
       className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/60 text-foreground/80 hover:text-brand hover:border-brand/60 transition-colors"
     >
-      {mounted && theme === "dark" ? <SunIcon /> : <MoonIcon />}
+      {theme === "dark" ? <SunIcon /> : <MoonIcon />}
     </button>
   );
 }
