@@ -1,7 +1,32 @@
+import type {Metadata} from "next";
 import {getTranslations, setRequestLocale} from "next-intl/server";
 import QuickMessageForm from "@/components/QuickMessageForm";
+import type {Locale} from "@/i18n/routing";
+import {
+  person,
+  personalProfiles,
+  professionalProfiles,
+  seoText,
+} from "@/data/profile";
+import {pageMetadata} from "@/lib/seo";
 
-const recipient = "cuongnm003@gmail.com";
+const recipient = person.email;
+
+// Links that are verified identities of the site owner get rel="me".
+const professionalLinks = new Set<string>(Object.values(professionalProfiles));
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{locale: string}>;
+}): Promise<Metadata> {
+  const {locale} = await params;
+  const t = await getTranslations({locale, namespace: "About"});
+  return pageMetadata(locale as Locale, "/about", {
+    title: t("title"),
+    description: seoText[locale as Locale].aboutDescription,
+  });
+}
 
 const contacts = [
   {
@@ -19,19 +44,19 @@ const contacts = [
   {
     labelKey: "githubLabel" as const,
     value: "github.com/deth102",
-    href: "https://github.com/deth102",
+    href: professionalProfiles.github,
     icon: "github",
   },
   {
     labelKey: "linkedinLabel" as const,
     value: "LinkedIn",
-    href: "https://www.linkedin.com/in/cuongnm1812/",
+    href: professionalProfiles.linkedin,
     icon: "linkedin",
   },
   {
     labelKey: "facebookLabel" as const,
     value: "Facebook",
-    href: "https://www.facebook.com/deth1812/",
+    href: personalProfiles.facebook,
     icon: "facebook",
   },
 ];
@@ -125,7 +150,11 @@ export default async function AboutPage({
                 key={contact.labelKey}
                 href={contact.href}
                 target={contact.href.startsWith("http") ? "_blank" : undefined}
-                rel={contact.href.startsWith("http") ? "noreferrer noopener" : undefined}
+                rel={
+                  contact.href.startsWith("http")
+                    ? `${professionalLinks.has(contact.href) ? "me " : ""}noreferrer noopener`
+                    : undefined
+                }
                 className="group flex items-center gap-4 rounded-2xl border border-transparent p-3 transition hover:border-border/80 hover:bg-card/70"
               >
                 <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand/12 text-brand transition group-hover:bg-brand group-hover:text-slate-950">

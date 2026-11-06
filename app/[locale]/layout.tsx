@@ -6,6 +6,12 @@ import { notFound } from "next/navigation";
 import "../globals.css";
 import Navbar from "@/components/Navbar";
 import { routing } from "@/i18n/routing";
+import {
+  googleSiteVerification,
+  person,
+  seoText,
+  siteUrl,
+} from "@/data/profile";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,10 +23,29 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "HenryCuong",
-  description: "Cuong's personal website",
-};
+// Site-wide defaults. Each page sets its own title, canonical, hreflang and
+// Open Graph via `pageMetadata` in lib/seo.ts.
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const text =
+    seoText[hasLocale(routing.locales, locale) ? locale : routing.defaultLocale];
+
+  return {
+    metadataBase: new URL(siteUrl),
+    title: text.homeTitle,
+    description: text.homeDescription,
+    applicationName: text.siteName,
+    authors: [{ name: person.name, url: siteUrl }],
+    creator: person.name,
+    ...(googleSiteVerification && {
+      verification: { google: googleSiteVerification },
+    }),
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
