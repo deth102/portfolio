@@ -64,6 +64,19 @@
     "title": "Publications",
     "learnMore": "Read the paper"
   },
+  "Paper": {
+    "back": "All publications",
+    "journalArticle": "Journal article",
+    "bookChapter": "Book chapter",
+    "publishedOnline": "Published online",
+    "readOnPublisher": "Read on publisher's site",
+    "openAccess": "Open access",
+    "abstract": "Abstract",
+    "keywords": "Keywords",
+    "cite": "Cite this paper",
+    "copy": "Copy",
+    "copied": "Copied"
+  },
   "Work": {
     "title": "Work",
     "roleLabel": "My Role",

@@ -1,5 +1,9 @@
 import { getTranslations } from "next-intl/server";
-import { researches, selfAuthor } from "@/data/research";
+import { Link } from "@/i18n/navigation";
+import { researches } from "@/data/research";
+import { venueShort } from "@/lib/citation";
+import { researchPath } from "@/lib/seo";
+import AuthorList from "./AuthorList";
 
 export default async function Research() {
   const t = await getTranslations("Research");
@@ -7,18 +11,19 @@ export default async function Research() {
   if (researches.length === 0) return null;
 
   return (
-    <section className="mx-auto max-w-6xl px-6 py-12 md:py-16">
+    <section
+      id="publications"
+      className="mx-auto max-w-6xl scroll-mt-8 px-6 py-12 md:py-16"
+    >
       <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
         {t("title")}
       </h2>
 
       <ul className="mt-8 grid grid-cols-1 gap-4">
         {researches.map((r) => (
-          <li key={r.url}>
-            <a
-              href={r.url}
-              target="_blank"
-              rel="noreferrer noopener"
+          <li key={r.slug}>
+            <Link
+              href={researchPath(r.slug)}
               aria-label={`${r.title} — ${t("learnMore")}`}
               className="group flex items-start justify-between gap-4 rounded-2xl border border-border/60 bg-card/40 p-5 md:p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand/50 hover:bg-card/70"
             >
@@ -27,16 +32,10 @@ export default async function Research() {
                   {r.title}
                 </span>
                 <span className="mt-2 block text-sm text-muted">
-                  {r.authors.map((a, i) => (
-                    <span key={a}>
-                      {i > 0 && ", "}
-                      {a === selfAuthor ? (
-                        <span className="font-semibold text-foreground">{a}</span>
-                      ) : (
-                        a
-                      )}
-                    </span>
-                  ))}
+                  <AuthorList authors={r.authors} />
+                </span>
+                <span className="mt-1 block text-sm italic text-muted">
+                  {venueShort(r)} · {r.year}
                 </span>
               </span>
               <svg
@@ -47,11 +46,11 @@ export default async function Research() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 aria-hidden
-                className="mt-1 h-4 w-4 shrink-0 text-brand"
+                className="mt-1 h-4 w-4 shrink-0 text-brand transition-transform group-hover:translate-x-0.5"
               >
-                <path d="M7 17 17 7M8 7h9v9" />
+                <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

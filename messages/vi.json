@@ -64,6 +64,19 @@
     "title": "Công bố khoa học",
     "learnMore": "Đọc bài báo"
   },
+  "Paper": {
+    "back": "Tất cả công bố",
+    "journalArticle": "Bài báo tạp chí",
+    "bookChapter": "Chương sách",
+    "publishedOnline": "Xuất bản trực tuyến",
+    "readOnPublisher": "Đọc trên trang nhà xuất bản",
+    "openAccess": "Truy cập mở",
+    "abstract": "Tóm tắt",
+    "keywords": "Từ khoá",
+    "cite": "Trích dẫn bài báo",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép"
+  },
   "Work": {
     "title": "Dự án",
     "roleLabel": "Vai trò",
