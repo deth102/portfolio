@@ -37,7 +37,7 @@
     "title": "Học vấn",
     "items": {
       "master": {"degree": "Thạc sĩ Kỹ thuật Cơ khí", "school": "Đại học Quốc lập Trung ương", "location": "Đài Loan", "period": "2026 - nay"},
-      "bachelor": {"degree": "Kỹ sư Cơ điện tử", "school": "Đại học Bách khoa Hà Nội", "location": "Hà Nội, Việt Nam", "period": "2021 - 2025", "note": "Tiếng Anh B2"}
+      "bachelor": {"degree": "Kỹ sư Cơ điện tử", "school": "Đại học Bách khoa Hà Nội", "location": "Hà Nội, Việt Nam", "period": "2021 - 2026", "note": "Tiếng Anh B2"}
     }
   },
   "Skills": {

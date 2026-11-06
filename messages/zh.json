@@ -37,7 +37,7 @@
     "title": "教育背景",
     "items": {
       "master": {"degree": "机械工程硕士", "school": "国立中央大学", "location": "台湾", "period": "2026年至今"},
-      "bachelor": {"degree": "机电一体化工程学士", "school": "河内理工大学", "location": "越南河内", "period": "2021年至2025年", "note": "良好等级毕业 · 英语 B2"}
+      "bachelor": {"degree": "机电一体化工程学士", "school": "河内理工大学", "location": "越南河内", "period": "2021年至2026年", "note": "良好等级毕业 · 英语 B2"}
     }
   },
   "Skills": {
